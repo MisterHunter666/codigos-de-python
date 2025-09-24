@@ -45,10 +45,13 @@ resultado = cadena1.lower()
 #convierte a minusculas
 #minusc = cadena1.lower()
 
-#buscamos una cadena en otra cadena
-busqueda_find = cadena1.find("Hola")
+#buscamos una cadena en otra cadena, si no hay coincidencias devuelve -1.
+busqueda_find = cadena1.find("d")
+
+#buscamos una cadena en otra cadena.
+busqueda_index = cadena1.index("D")
 #Queremos ver si en esta cadena de texto encontramos la cadena "Hola".
-print (busqueda_find)
+print (busqueda_index)
 # Va a devolver 0.
 # Porque devuelve la posición en la que encuentra lo que se le pida.
 
@@ -92,8 +95,60 @@ print (resultado)
 # print (busqueda_find)
 # Va a devolver 0.
 # Porque devuelve la posición en la que encuentra lo que se le pida.
+# Si se busca la letra "a", se encuentra en la posición 3 porque esto es como si fuera un objeto. No deja de ser un objeto, un arreglo o lo que queramos. Entonces, tiene posiciones. Una cadena de texto es un conjunto de caracteres. Esto es el uno(H), dos(o), tres(l), cuatro(a).
+# Si la A está en el cuarto lugar, ¿por qué me devuelve el tres?
+# Porque en las listas contamos de cero(0) a uno(1).
+# En una matriz se cuenta de cero en adelante. No arrancamos a contar desde uno, arrancamos a contar desde cero.
+# Entonces, este valor(H) no es uno, es cero. Si la "H" es cero(0), entonces "o" es uno(1). Si "o" es uno(1), entonces "l" es dos(2). Si "l" es dos(2), entonces "a" es tres(3). Entonces, tenemos cero(0, "H"), uno(1, "o"), dos(2, "l"), tres(3, "a").
+# Es verdad, la posición en la que se encuentra la letra que le dijimos está en el tres(3, "a"), la tercera posición. Así que, efectivamente, nos funciona de esa forma.
+# ¿En dónde encontramos una "s"? ¿en qué posición tenemos una "s"?
+# En la posición cinco(5).
+# cero(0, "H"), uno(1, "o"), dos(2, "l"), tres(3, "a"), cuatro(4, " "), cinco(5, "s"), efectivamente.
+# ¿Y si encontramos una "m"?
+# Devueve un -1, no existe.
+# No hay forma de que sea -1.
+# Lo que sucede es que devuelve -1 cuando no encuentra un valor.
+# Porque Python es sensible a mayúsculas y minúsculas. Es justamente key sensitive.
+# Entonces, se puso una M mayúscula.
+# Si se hubiera puesto una m minúscula, hubiera dicho que estaba en la posición nueve(9).
+# cero(0, "H"), uno(1, "o"), dos(2, "l"), tres(3, "a"), cuatro(4, " "), cinco(5, "s"), seis(6, "o"), siete(7, "y"), ocho(8, " "), nueve(9, "m").
+# Los espacios también cuentan como números.
+# " ": esto también es un espacio, esto sí existe. Existe y es un caracter más. Entonces, cuenta.
+
+# cadena1 = "Hola soy Matias"
+#            ||||||||||
+#            vvvvvvvvvv
+#            0123456789
+
+# Está bien, cumple con la condición.
+
+# Si se le dice la d minúscula, muestra -1.
+# Pero entonces, ¿por qué muestra -1?
+# Porque -1 es el valor que devuelve cuando no encuentra algo.
+# Porque como no existe la posición -1, eso es lo que estaría devolviendo en caso de no encontrar nada.
+# Si no encuentra nada, devuelve -1.
+# Entonces, se pone: busca una cadena en otra cadena, si no hay coincidencias devuelve -1.
+
+# Después, se tiene otra función que es igual.
+# La diferencia es que es index().
  
 # INDEX - método encuentra la primera aparición del valor especificado, sino devuelve una excepción.
+# Busca una cadena en otra cadena.
+# busqueda_index = cadena1.index("D")
+# Si se le pasa la D, por ejemplo, la D mayúscula, se va a poner busqueda_index.
+# print (busqueda_index)
+# Esto va a devolver nueve(9), está bien.
+# Funciona exactamente igual.
+# Si se pasa la a, va a devolver tres(3), listo, está funcionando igual.
+# Evidentemente está bien.
+# Pero entonces, ¿para qué está hecha la función find() o index() si funcionan igual?
+# Bueno, la diferencia es que en una, si no encuantra nada, devuelve -1 (find), pero en otra, si no encuentra nada, por ejemplo, vamos a ponerle un nueve(9).
+# busqueda_index = cadena1.index("9")
+# No hay ningún 9, así que debería devolver un error.
+# Como por ejemplo acá, en la d minúscula.
+# busqueda_index = cadena1.index("d").
+# Nos tira un error, nos lanza una excepción.
+# Más adelante, vamos a ver esto qué son las excepciones y cómo manejarlas, porque en un futuro tenemos que aprender a manejar las excepciones para que en caso de que nos lance un error en medio del programa, sepamos manejarlas y saber qué hacer con el programa para que no se trabe.
 
 # ISNUMERIC - si es numerico, devuelve true.
 # ISALPHA - si es alfa numérico, devuelve true.
