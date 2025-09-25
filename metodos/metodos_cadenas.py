@@ -26,6 +26,9 @@ cadena2 = "Bienvenido maquinola"
 
 # Para empezar, lo que vamos a hacer va a ser ver los diferentes metodos que hay.
 
+# función
+#  |
+#  v
 # DIR - devuelve la lista de atributos válidos del objeto pasado. Es uno que permite devolver todos los atributos de un objeto. Por ejemplo:
 dir(cadena1)
 # Al correrlo, no se devuelve nada porque dir() ejecuta algo y es un valor que deja suelto. Si se quiere mostrar en pantalla eso que se está haciendo, se tiene que envolverlo en un print(), ¿cómo se hace? Así: 
@@ -46,14 +49,23 @@ resultado = cadena1.lower()
 #minusc = cadena1.lower()
 
 #buscamos una cadena en otra cadena, si no hay coincidencias devuelve -1.
-busqueda_find = cadena1.find("d")
+busqueda_find = cadena1.find("M")
 
-#buscamos una cadena en otra cadena.
-busqueda_index = cadena1.index("D")
+#buscamos una cadena en otra cadena, si no hay coincidencias lanza una excepción
+busqueda_index = cadena1.index("M")
 #Queremos ver si en esta cadena de texto encontramos la cadena "Hola".
 print (busqueda_index)
 # Va a devolver 0.
 # Porque devuelve la posición en la que encuentra lo que se le pida.
+
+# dir dato, no dato.dir()
+# dir(dato)
+
+#si es numerico, devolvemos true, sino devolvemos false
+es_numerico = cadena1.isnumeric()
+#devuelve false
+#si es alfanumérico, devolvemos true, sino devolvemos false
+es_alfanumerico = cadena1.isalpha()
 
 #primera letra en mayuscula
 #primer_letra_mayusc = cadena1.capitalize()
@@ -64,7 +76,7 @@ print (busqueda_index)
 # Entonces, lo que hace es primero convierte todo en minuscula y después la primera letra la deja en mayuscula.
 # Así es como funciona esta cadena.
 
-print (resultado)
+print (es_alfanumerico)
 #Acá se muestra el resultado.
 # Si se ejecuta, se tiene lo mismo que dir(cadena1). Así que, lo que sucede en dir(cadena1), se va a almacenar en resultado.
 
@@ -149,9 +161,67 @@ print (resultado)
 # busqueda_index = cadena1.index("d").
 # Nos tira un error, nos lanza una excepción.
 # Más adelante, vamos a ver esto qué son las excepciones y cómo manejarlas, porque en un futuro tenemos que aprender a manejar las excepciones para que en caso de que nos lance un error en medio del programa, sepamos manejarlas y saber qué hacer con el programa para que no se trabe.
+# Porque sino, si hay una excepción el programa se traba ahí y no avanza más. Y eso no puede suceder.
+# Entonces tenemos que aprender a manejarlas.
+# Bueno, en un futuro lo vamos a aprender a hacer.
+# Pero justamente la diferencia entre find() e index() es que index(), en caso de no encontrar una coincidencia, nos tira una excepción. Entonces, vamos a agregarlo.
+#buscamos una cadena en otra cadena, si no hay coincidencias, lanza una excepción
+# busqueda_index = cadena1.index("M")
+# Vamos a darle M y M mayúscula
+# busqueda_find = cadena1.find("M")
+# busqueda_index = cadena1.index("M")
+# Entonces, si actualizamos y corremos el código, nos da nueve(9). Efectivamente, funciona.
 
-# ISNUMERIC - si es numerico, devuelve true.
+# Método y función no son lo mismo porque todos los métodos son funciones, pero no todas las funciones sos métodos justamente.
+# Porque los métodos son funciones específicas de objetos.
+# Si no es una función de un objeto, no es un método.  
+# Ponemos dir dato, no ponemos dato.dir(), entonces no es un método, es una función
+# dir(dato)
+# Vamos a verlo más adelante bien.
+# Cuando trabajemos con programación orientada a objetos, vamos a entenderlo bien. Porque vamos a poder crear objetos.
+# Y cuando creamos un objeto a ese objeto, vamos a poder aplicarle funciones propias de ese objeto.
+# Por ejemplo, un perro puede ladrar, pero no podemos decir que "ladrar" si no hay un perro. No podemos decir al programa "ladrar". Tiene que ser una función aplicada a un objeto. Entonces, ahí sí le podemos decir "ladrar". 
+# Lo vamos a ver más adelante cuando vemos a programación orientada a objetos.
+# Pero solo para saber que un método es una función aplicada a un objeto. Nada más.
+
+# upper(), lower(), capitalize(): estos métodos justamente nos convierten el valor.
+
+# find(), index(): estos métodos buscan un valor.
+
+# isnumeric(), isalpha(): estos métodos consultan otra cosa. Es decir, nos devuelven también datos, pero justamente nos consultan si son numéricos o alfanuméricos.
+
+# count(), len(): estos métodos hacen otra cosa que ya vamos a ver...
+
+# endswith(), startswith(): estos métodos hacen otras cosas que vamos a ver junto con replace() y split().
+
+# Así que, vamos a seguir con isnumeric() y isalpha().
+
+# ISNUMERIC - si es numerico, devuelve true. Es una función que nos permite ver que si es numérico, devuelve true.
+#si es numerico, devolvemos true, sino devolvemos false
+# es_numerico = cadena1.isnumeric()
+#devuelve false
+# ¿Qué pasa si se le pone números?
+# cadena1 = "534534534"
+# busqueda_index = cadena1.index("5")
+# es_numerico = cadena1.isnumeric()
+# Nos devuelve true, ¿por qué? porque es valor numérico.
+# Aunque sea un texto, esto: "534534534" es un texto, no es un valor numérico.
+# Para que sea un valor numérico, tiene que ser esto: 534534534
+# Pero lo que hace isnumeric() es verificar si es un número.
+# Porque a ver, sí, está bien. Es un texto que tiene solo números. Bueno, entonces vamos a verificarlo. isnumeric(). Si es numérico, nos va a devolver true.
+# Ahora vamos a comprobar si es alfanumérico.
+
 # ISALPHA - si es alfa numérico, devuelve true.
+# Si es alfanumérico, devolvemos true, sino devolvemos false
+# es_alfanumerico = cadena1.isalpha()
+# Solamente son válidos los caracteres desde la A a la Z.
+# A, B, C, D, E, F, G, H, hasta la Z.
+# Las letras del abecedario.
+# El espacio (" ") no es alfanumérico.
+# Entonces tenemos que sacarlo.
+# Los espacios no son caracteres alfanuméricos, son caracteres especiales.
+# Los caracteres especiales son, por ejemplo, el espacio(" "), el slash(\ y /), los puntos(.), las comas(,), etcétera.
+# Entonces, solo si es alfanumérico, este método nos va a devolver true.
 
 # COUNT - devuelve el número de ocurrencias de una subcadena en la cadena dada.
 # LEN - cuenta los caracteres de una cadena.
