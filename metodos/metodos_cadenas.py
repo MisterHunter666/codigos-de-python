@@ -175,7 +175,7 @@ print (es_alfanumerico)
 # Método y función no son lo mismo porque todos los métodos son funciones, pero no todas las funciones sos métodos justamente.
 # Porque los métodos son funciones específicas de objetos.
 # Si no es una función de un objeto, no es un método.  
-# Ponemos dir dato, no ponemos dato.dir(), entonces no es un método, es una función
+# Ponemos dir(dato), no ponemos dato.dir(), entonces no es un método, es una función
 # dir(dato)
 # Vamos a verlo más adelante bien.
 # Cuando trabajemos con programación orientada a objetos, vamos a entenderlo bien. Porque vamos a poder crear objetos.
