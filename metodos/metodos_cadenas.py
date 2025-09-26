@@ -67,6 +67,25 @@ es_numerico = cadena1.isnumeric()
 #si es alfanumérico, devolvemos true, sino devolvemos false
 es_alfanumerico = cadena1.isalpha()
 
+#buscamos una cadena en otra cadena, devuelve la cantidad de veces que coincida
+#contamos las coincidencias de una cadena, dentro de otra cadena, devuelve la cantidad de coincidencias
+contar_coincidencias = cadena1.count("a")
+# ¿Cúantas veces está la letra a?
+
+#contamos cuántos caracteres tiene una cadena
+contar_caracteres = len(cadena1)
+
+#verificamos si una cadena empieza con otra cadena dada, si es así devuelve True
+empieza_con = cadena1.startswith("H")
+# ¿Esta cadena empieza con "H"?
+# Empieza con H, entonces devuelve True.
+
+#verificamos si una cadena termina con otra cadena dada, si es así devuelve True
+termina_con = cadena1.endswith("s")
+# ¿Termina con "s"? 
+# Efectivamente, termina con "s"
+# Devuelve True
+
 #primera letra en mayuscula
 #primer_letra_mayusc = cadena1.capitalize()
 # print (primer_letra_mayusc)
@@ -76,7 +95,7 @@ es_alfanumerico = cadena1.isalpha()
 # Entonces, lo que hace es primero convierte todo en minuscula y después la primera letra la deja en mayuscula.
 # Así es como funciona esta cadena.
 
-print (es_alfanumerico)
+print (contar_coincidencias)
 #Acá se muestra el resultado.
 # Si se ejecuta, se tiene lo mismo que dir(cadena1). Así que, lo que sucede en dir(cadena1), se va a almacenar en resultado.
 
@@ -224,12 +243,184 @@ print (es_alfanumerico)
 # Entonces, solo si es alfanumérico, este método nos va a devolver true.
 
 # COUNT - devuelve el número de ocurrencias de una subcadena en la cadena dada.
+# Count () lo que hace es devolvernos el número de ocurrencias de una subcadena en la cadena dada. Lo mismo que antes. En vez de encontrar una coincidencia, nos dice cuántas veces se encontró una coincidencia.
+#buscamos una cadena en otra cadena, devuelve la cantidad de veces que coincida
+# contar_coincidencias = cadena1.count("a")
+# ¿Cúantas veces está la letra a?
+# La letra a está tres veces.
+# Vamos a ver:
+# cadena1 = "Hola soy Matias"
+#               |      |  |
+#               v      v  v
+#               1      2  3
+# contar_coincidencias = cadena1.count("M")
+# ¿Cuántas veces está la M mayúscula?
+# La letra M mayúscula está una vez.
+# Vamos a ver:
+# cadena1 = "Hola soy Matias"
+#                     |  
+#                     v  
+#                     1
+# contar_coincidencias = cadena1.count("m")
+# ¿Qué nos devuelve con la m minúscula?
+# Si no se encuentra, dice que es cero(0), porque está cero veces.
+# Vamos a ver:
+# cadena1 = "Hola soy Matias"
+#                |
+#                V       
+# NO HAY NINGUNA d MINÚSCULA EN ESTA CADENA
+
+# count() cuenta la cantidad de veces que está lo que se le pasa.
+# contar_coincidencias = cadena1.count("Hola")
+# ¿Cuántas veces está "Hola"?
+# "Hola" está una vez, porque así el texto tal cual, "Hola", en este orden está una vez.
+# Vamos a ver:
+# cadena1 = "Hola soy Matias"
+#             |  
+#             v          
+#             1 
+
+# cadena1 = "Hola maquina Hola soy Matias"
+# contar_coincidencias = cadena1.count("Hola")
+# ¿Cuántas veces está "Hola" con la cadena1 actualizada?
+# "Hola" ahora va a decir que se encontró dos veces, porque este texto, "Hola", está una vez y otra vez.
+# Vamos a ver:
+# cadena1 = "Hola maquina Hola soy Matias"
+#             |            |
+#             v            v
+#             1            2
+
+# Incluso, si yo pusiera, por ejemplo, "lama", debería tirarme como que hay una vez, ¿no?
+# contar_coincidencias = cadena1.count("lama")
+# A ver, vamos a verificar:
+# cadena1 = "Hola maquina Hola soy Matias"
+#                |            
+#                v            
+#                0  
+
+# Nos dice que es cero.
+# Ahora, si lo juntáramos
+# cadena1 = "Holamaquina Hola soy Matias"
+# contar_coincidencias = cadena1.count("lama")
+# Actualizamos:
+
+# cadena1 = "Holamaquina Hola soy Matias"
+#                |            
+#                v            
+#                1
+
+# Nos dice que es uno(1) porque "lama" está todo junto. Si lo separamos: 
+# contar_coincidencias = cadena1.count("la ma")
+# nos dice que ahora de vuelta no hay coincidencias.
+
+# Si lo volvemos a separar:
+# cadena1 = "Hola maquina Hola soy Matias"
+# contar_coincidencias = cadena1.count("la ma")
+# Actualizamos:
+# cadena1 = "Hola maquina Hola soy Matias"
+#                |            
+#                v            
+#                1
+
+# Hay una coincidencia porque esto es un texto tal cual.
+# Con los caracteres especiales incluidos.
+# Todo el texto tal cual, tiene que estar en algún lugar de esta cadena.
+
+# Después tenemos len()...
+
 # LEN - cuenta los caracteres de una cadena.
+# Nuevamente, len() es una función pero no un método.
+# len() también cuenta, pero lo que cuenta len() es la cantidad de caracteres que tiene una cadena.
+# Así que vamos a verificarlo:
+# contamos cuántos caracteres tiene una cadena
+# contar_caracteres = cadena1.len("Hola")
+# Este len() es muy utilizado, en matrices también, ya vamos a ver cómo lo usamos en matrices.
+# Si hora ponemos, por ejemplo:
+# print(contar_caracteres)
+# Actualizamos:
+# Y Ahí, efectivamente, vemos que nos tira un error.
+# ¿Por qué nos tira un error?
+# Bien, porque len() no es un método, len() es una función.
+# Entonces, tenemos que poner:
+# contar_caracteres = len(cadena1)
+# Entonces ahora sí ya queda funcionando.
+# Lo actualizamos 
+# Vemos si corre
+# Y ahora si funciona
+# Nos dice que cadena1 tiene 27 caracteres.
+# cadena1 = "Hola maquina Hola soy Matias"
+#                                 |            
+#                                 v            
+#                                 27
+
+# Efectivamente, tiene 27 caracteres
+# Si de repente dejo esto:
+# cadena1 = "Hol"
+# Me va a decir que tiene solamente tres(3) caracteres.
+# Bueno, actualizamos y nos dice:
+# que tiene tres(3), efectivamente tiene tres(3)
+
+# # Si dejamos solamente "hola"
+# cadena1 = "Hola"
+# Vamos a ver cuánto tiene
+# Actualizamos:
+# Nos dice cuatro(4), entonces funciona.
+
+# Lo que hace len(), la función len(), es que nos cuenta cuántos caracteres tiene una cadena.
+
+# Después tenemos dos que son muy interesantes, que son endswith() y startswith().
+# Estos ya son métodos también, y también son para verificar.
 
 # ENDSWITH - verifica si una cadena comienza con
+# verificamos si una cadena termina con otra cadena dada, si es así devuelve True
+# termina_con = cadena1.endswith("H")
+# ¿Termina con "H"? 
+# No
+
+# termina_con = cadena1.endswith("H")
+# ¿Termina con "s"? 
+# Efectivamente, termina con "s"
+
+# termina_con = cadena1.endswith("ias")
+# ¿Termina con "ias"? 
+# Si, porque tenemos "Matías" y "Matias" termina con "ias".
+
+# Así es como funciona este método.
+
 # STARTSWITH - verifica si una cadena termina con
+# verificamos si una cadena empieza con otra cadena dada, si es así devuelve True
+# empieza_con = cadena1.startswith("H")
+# Y acá le preguntamos, a ver, ¿esta cadena empieza con "H", por ejemplo?
+# Y efectivamente si empieza con ... nos debería devolver True
+# print(empieza_con)
+# Empieza con H, entonces nos devuelve True.
+
+# ¿Empieza con "Ho"?
+# empieza_con = cadena1.startswith("Ho")
+# print(empieza_con)
+# Nos devuelve True
+
+# ¿Empieza con "Hola"?
+# empieza_con = cadena1.startswith("Hola")
+# print(empieza_con)
+# Nos devuelve True
+
+# Ahora ¿Empieza con "h"? h minúscula
+# empieza_con = cadena1.startswith("h")
+# print(empieza_con)
+# Nos devuelve False, falso
+
+# ¿Empieza con "HO"? H mayúscula y O mayúscula
+# empieza_con = cadena1.startswith("HO")
+# print(empieza_con)
+# Nos devuelve False porque empieza con H mayúscula y o minúscula
+# Entonces, esto lo que hace es verificar que la cadena empiece con lo que se le pasa. Es muy interesante
+
+# Y después tenemos estos dos que ya son más interesantes...
 
 # REPLACE - reemplaza un valor por otro.
+# Este método nos reemplaza un valor
+
 # SPLIT - separa por el parametro dado.
 
 # Los metodos pueden retornar tipos de valores diferentes.
