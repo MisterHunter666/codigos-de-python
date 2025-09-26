@@ -86,6 +86,10 @@ termina_con = cadena1.endswith("s")
 # Efectivamente, termina con "s"
 # Devuelve True
 
+#reemplaza un pedazo de la cadena dada, por otra dada
+cadena_nueva = cadena1.replace("la", "lu")
+# "Hola" se convierte en "Holu"
+
 #primera letra en mayuscula
 #primer_letra_mayusc = cadena1.capitalize()
 # print (primer_letra_mayusc)
@@ -420,6 +424,21 @@ print (contar_coincidencias)
 
 # REPLACE - reemplaza un valor por otro.
 # Este método nos reemplaza un valor
+# reemplaza un pedazo de la cadena dada, por otra dada
+# Tiene dos parámetros: el primer parámetro es el antiguo, es decir, vamos a reemplazar "la" por "lu". En vez "Hola", vamos a reemplazarlo por "Holu"
+# O sea, termina con "la" y este "la" lo vamos a convertir en un "lu"
+# Vamos a ver si funciona:
+# cadena_nueva = cadena1.replace("la", "lu")
+# Vamos a decirle que nos muestre qué es lo que hay en "cadena_nueva" y verificarlo
+# print(cadena_nueva)
+# cadena_nueva nos dice "Holu", efectivamente
+# "Hola" se convierte en "Holu"
+
+# Ahora, en vez de reemplazar "Hola", ahora quiero reemplazar la cadena entera
+# cadena_nueva = cadena1.replace("Hola", "Holu maquina")
+# Vamos a ver
+# print(cadena_nueva)
+# cadena_nueva muestra "Holu maquina"
 
 # SPLIT - separa por el parametro dado.
 
