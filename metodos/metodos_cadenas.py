@@ -90,6 +90,9 @@ termina_con = cadena1.endswith("s")
 cadena_nueva = cadena1.replace("la", "lu")
 # "Hola" se convierte en "Holu"
 
+#separar cadenas con la cadena que le pasemos
+cadena_separada = cadena1.split(",")
+
 #primera letra en mayuscula
 #primer_letra_mayusc = cadena1.capitalize()
 # print (primer_letra_mayusc)
@@ -439,8 +442,94 @@ print (contar_coincidencias)
 # Vamos a ver
 # print(cadena_nueva)
 # cadena_nueva muestra "Holu maquina"
+# Y ahora vamos a reemplazar "Hola" con h minúscula, a ver qué pasa:
+# devuelve "Hola"
+# no pasa nada, nos devulve la cadena anterior, ¿por qué? porque si encuentra una coincidencia en la cadena que le pasamos, esa coincidencia la va a reemplazar por lo que le pasamos en el segundo parámetro.
+# En caso de no encontrar coincidencias, nos va a devolver la cadena anterior.
+# Si el valor 1 nos encuentra la cadena original, reemplaza el valor 1 de la misma por el valor 2. Es decir, si este valor, "hola", lo encontramos en la cadena original, reemplaza "hola" dentro de la cadena1 por "hola".
+# Si yo por ejemplo, le dijera que reemplace esto: "la", esto me lo va a encontrar "Hola"
+#                                        |
+#                                        v
+# Entonces lo va a encontrar, hay una coincidencia 
+# ¿Qué va a hacer? 
+# Me va a reemplazar en donde encuentre esto: "la", lo va a borrar y va a poner esto: "Holu maquina".
+# cadena_nueva = cadena1.replace("la", "Holu maquina")
+# Entonces, lo que haría sería: "Esto me lo va a reemplazar: la, por lo que esté acá: Holu maquina".
+# Entonces, me lo reemplazaría por esto: "HoHolu maquina", y así quedaría el string.
+# Vamos a verificarlo, vamos a ver qué pasa
+# Vamos a actualizarlo y a ver:
+# Efectivamente, esto es lo que nos da: "HoHolu maquina"
+# Básicamente, reemplaza una cadena por otra
+# ¿Para qué nos sirve? 
+# Bueno, si yo te pongo: "Hola,Maquina,Como,Estas"
+# Yo tengo todas las palabras separadas por coma (","), ¿qué puedo hacer?
+# Primero, la cadena separame las comas que encuentres por espacios (" ")
+# cadena_nueva = cadena1.replace(",", " ")
+# Tengo una cadena que está hecha por espacios, cuando queremos ver la nueva cadena, tenemos la cadena sin espacios.
+# Y ahora por ejemplo, a cadena_nueva_2, la vamos a convertir solamente para que la primer letra tenga mayúscula
+# cadena_nueva_2 = cadena_nueva.capitalize()
+# Vamos a correr el código
+# print(cadena_nueva_2)
+# Devuelve "Hola maquina como estas"
+# Antes nos mostró la cadena con todas las mayúsculas al principio de cada letra, y ahora como le dimos capitalize() a la cadena nueva, que es esta: cadena_nueva, nos mostró todas con minúsculas excepto la primera letra, que está en mayúscula.
+# Con estos métodos, podemos justamente trabajar las cadenas y jugar un poco con estas mismas, y ahí más o menos tenemos las funcionalidades más comunes, que las cosas más comunes que solemos usar con las cadenas dentro de Python.
+
+# Después, el último método es especial porque el último método es el único de todos estos métodos que nos va a devolver una matriz, o sea, una lista, ¿cómo es eso? Bien:
 
 # SPLIT - separa por el parametro dado.
+
+# Esto que está acá nos va a separar cadenas con la cadena que le pasemos, así de simple.
+# Por ejemplo,
+# cadena_separada = cadena1.split()
+# Bueno, ¿por qué queremos separar las cadenas?
+# Bueno, vamos a hacer que cada coma (",") nos separe, o sea, que nos separe las palabras por comas (",").
+# cadena1 = "Hola,Maquina,Como,Estas"
+#              |       |   |   | 
+#              v       v   v   v
+#              1       2   3   4           
+# Bueno, vamos a verlo
+# Vamos a separarlas por comas (",")
+# cadena_separada = cadena1.split(",")
+# Queremos que cada vez que haya una coma, nos separe de la cadena.
+# Vamos a ver qué nos devuelve:
+# print(cadena_separada)
+# Si actualizamos, nos devuelve una lista.
+# ['Hola', 'Maquina', 'Como', 'Estas']
+# Efectivamente, si preguntamos qué tipo de dato es...
+# print(type(cadena_separada))
+# Vamos a ver
+# <class 'list'>
+# Nos devuelve una lista
+# Porque, efectivamente, lo que hace es: crea una lista. El método split() crea una lista en el que separa todo lo que le pasamos y lo agrega.
+# Es decir, crea una lista con este valor: "Hola", separado, este: "Maquina", la separa, este: "Como", la separa, este: "Estas", la separa.
+# O sea, básicamente, separa todo por lo que le pasemos.
+# En este caso, le pasamos una coma (",").
+# Entonces, me separa la cadena en comas.
+# Acá está la cadena 1: "Hola"
+# la cadena 2: "Maquina"
+# la cadena 3: "Como"
+# la cadena 4: "Estas"
+# Y las agrega todas a una lista que la podemos encontrar acá: ['Hola', 'Maquina', 'Como', 'Estas']
+# De hecho, si queremos, podemos decirle por ejemplo:
+# Mostrame cadena separada 1
+# print(cadena_separada[1])
+# ¿Qué tenés en cadena separada 1?
+# Y nos dice: "Maquina"
+# ['Hola', 'Maquina', 'Como', 'Estas']
+#    |         |        |       |
+#    v         v        v       v
+#    0         1        2       3
+# ¿Qué tenés en cadena separada 0?
+# # Nos dice: "Hola"
+# ¿Por qué? porque cadena separada es una lista con cada una de estas palabras separadas.
+# La posición 0 es la primer cadena que agregamos, que es "Hola"
+# Así de facil funciona este método, la verdad que es interesante y lo recomiendo mucho porque aparte de los métodos de cadena, estos son cosas que podemos hacer con cadenas. 
+# Más adelante, vamos a ver otros tipos de métodos, incluso que son más complejos que estos, pero ahora realmente no vamos a necesitarlos, sino que más adelante sí pero ahora no.
+# Lo que si vamos a necesitar son métodos para poder trabajar con listas.
+# Porque estos son solamente métodos de cadenas.
+# Pero ahora tenemos que ver cuáles son los métodos para trabajar con listas.
+# Que también las usamos mucho cuando estamos programando con Python.
+# Así que, vamos a ver cómo trabajamos con los métodos de listas.
 
 # Los metodos pueden retornar tipos de valores diferentes.
 # Retornar un valor significa "devolvernos" porque cuando ejecutamos una función, es decir, nosotros ejecutamos una función y lo que ejecutamos, nos retorna algo. Es decir, por ejemplo, "minusc = cadena1.lower()" esta variable se convierte en de repente esto: "minusc = "hola soy matias"".
