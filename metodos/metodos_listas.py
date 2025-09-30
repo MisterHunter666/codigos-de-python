@@ -1,7 +1,7 @@
 # Los metodos de listas son métodos que vamos a poder aplicar a listas para operarlas.
 
 #Creando una lista con list()
-lista = list(["hola","dalto",34,56,23,True])
+lista = list(["hola","matias",34,56,23,True])
 
 #devuelve la cantidad de elementos de la lista.
 cantidad_elementos = len(lista)
@@ -26,7 +26,7 @@ print(lista)
 # No es un método, es una función, como anteriormente vimos dir(). También, tenemos esta función de list(), que list() justamente crea una lista.
 
 # Creando una lista con list()
-#lista = list("hola","dalto",34)
+#lista = list("hola","matias",34)
 
 # Lo ejecutamos
 #print(lista)
@@ -34,10 +34,10 @@ print(lista)
 # En este caso, nos devuelve una excepción
 # ¿Por qué nos devuelve una excepción?
 # Bien, porque esto justamente toma como parámetro realmente una lista.
-# lista = list(["hola","dalto",34])
+# lista = list(["hola","matias",34])
 # Y de esa forma, ahora sí creamos una lista. 
 # Podemos ver que cuando lo actualizamos y lo corremos, tenemos la lista creada.
-# ['hola', 'dalto', 34]
+# ['hola', 'matias', 34]
 # Como no tiene sentido hacer esto para crear una lista, es raro.
 # Como trabajamos, por ejemplo, con tuplas y demás. Bueno, podemos usarlo, pero no es lo más común. Pero nada, que sepan que con list() también podemos crear listas.
 # Un buen uso, es para crear una lista vacía, es decir sin elementos.
@@ -66,14 +66,14 @@ print(lista)
 
 # Si hacemos esto con la lista, nos devuelve la cantidad de elementos de la lista.
 # Por ejemplo, si se pone otros elementos...
-# lista = list(["hola","dalto",34,56,23,True])
+# lista = list(["hola","matias",34,56,23,True])
 # Ahora me va a devolver que la lista tiene seis(6) elementos.
-# ["hola","dalto",34,56,23,True]
-#    |      |     |  |  |   |
-#    v      v     v  v  v   v
-#    1      2     3  4  5   6
-#                           |
-#                           v
+# ["hola","matias",34,56,23,True]
+#    |      |      |  |  |   |
+#    v      v      v  v  v   v
+#    1      2      3  4  5   6
+#                            |
+#                            v
 # Esto es True, por lo que nos va devolver seis(6) elementos. 
 
 # cantidad_elemento = len(lista)
@@ -93,7 +93,7 @@ print(lista)
 # Vamos a ver qué nos devuelve esto
 # Primero, si agregamos ese elemento, la lista tiene otro elemento más
 # print(lista)
-# ["hola","dalto",34,56,23,True, "JAJAJAJA"]
+# ["hola","matias",34,56,23,True, "JAJAJAJA"]
 # No llamamos a esta variable, llamamos solo a la lista y ahora la lista fue modificada.
 # Lo que hicimos acá no fue modificar a esta variable que estamos creando, sino que fue modificar directamente a la lista.
 # Entonces de esta forma, a la misma lista le agregamos este elemento: "JAJAJAJA"
@@ -119,9 +119,9 @@ print(lista)
 # insert() lo que hace justamente es agregar una lista.
 # Si actualizamos y corremos el programa, ahí nos lo agregó.
 # En el indice 2 nos agregó "TOMA MAMA"
-# ["hola","dalto","TOMA MAMA",34,56,23,True, "JAJAJAJA"]
+# ["hola","matias","TOMA MAMA",34,56,23,True, "JAJAJAJA"]
 # "hola" = 0 
-# "dalto" = 1
+# "matias" = 1
 # "TOMA MAMA" = 2
 
 # O sea, que antes del 34, el indice 2 va a ser el elemento que le pasamos
