@@ -165,6 +165,11 @@ print(lista)
 # ¿Por qué? porque pop() nos pide el indice.
 # Vamos a eliminar el elemento 0, por ejemplo.
 # lista.pop(0)
+# Entonces, si ahora vamos a actualizar la lista, lista ahora no tiene el elemento 0. El elemento 0 era "hola".
+# print(lista)
+# ['matias', 'TOMA MAMA', 34,56,23,'JAJAJAJA', False, 2030]
+# ¿Ven? Antes estaba "hola". Pero ahora ya no tiene elemento 0. El elemento ahora pasa a ser "matias". Porque el que antes era el elemento 0 lo eliminó. 
+# Si antes ponemos, por ejemplo, antes de que hagamos esto. Le digo: "mostrame en patalla len(lista)", es decir, si le pido que me muestre el tamaño de la lista y le pido que después me muestre el tamaño de la lista.
  
 # REMOVE - remueve un elemento de una lista, pide valor
 # CLEAR - elimina todos los elementos de una lista
