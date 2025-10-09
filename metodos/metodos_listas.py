@@ -15,10 +15,11 @@ lista.insert(2,"TOMA MAMA")
 #agregamos varios elementos a la lista 
 lista.extend([False,2030])
 
-#eliminando un elemento de la lista por su indice
-lista.pop(0)
+#eliminando un elemento de la lista (por su indice)
+lista.pop(3) #-1 para elminar el último, -2 para eliminar el anteultimo, y así sucesivamente
 
 print(lista)
+
 
 # Vamos con el primero que es el list()
 
@@ -161,7 +162,7 @@ print(lista)
 # POP - elimina un elemento de una lista, pide indice y devuelve valor
 # pop() al contrario de agregar, ya estamos eliminando 
 
-# eliminando un elemento de la lista por su indice
+# eliminando un elemento de la lista (por su indice)
 # ¿Por qué? porque pop() nos pide el indice.
 # Vamos a eliminar el elemento 0, por ejemplo.
 # lista.pop(0)
@@ -169,9 +170,54 @@ print(lista)
 # print(lista)
 # ['matias', 'TOMA MAMA', 34,56,23,'JAJAJAJA', False, 2030]
 # ¿Ven? Antes estaba "hola". Pero ahora ya no tiene elemento 0. El elemento ahora pasa a ser "matias". Porque el que antes era el elemento 0 lo eliminó. 
-# Si antes ponemos, por ejemplo, antes de que hagamos esto. Le digo: "mostrame en patalla len(lista)", es decir, si le pido que me muestre el tamaño de la lista y le pido que después me muestre el tamaño de la lista.
+# Si antes ponemos, por ejemplo, antes de que hagamos esto. Le digo: "mostrame en patalla len(lista)", es decir, si le pido que me muestre el tamaño de la lista y le pido que después me muestre el tamaño de la lista, van a ver esto que es bastante interesante.
+# print (len(lista))
+
+# lista.pop(0)
+
+# print (len(lista))
+
+# 10
+# 9 
+# Me muestra un 10 y un 9, ¿por qué? porque antes la lista tenía 10 elementos. 
+# Lo muestro en pantalla.
+# Y muestro en pantalla que la lista tiene 10 elementos. 
+# Después sacamos un elemento (el elemento 0)
+# Y cuando le volvemos a preguntar cuántos elementos tiene, nos dice: "ahora tiene 9". 
+# Entonces, 10 elementos. Nos muestra el diez (10).
+# Borramos el elemento. Mostramos de vuelta y ahora nos muestra que tiene 9 elementos. Así funciona pop().
+# Justamente, nos elimina un elemento de la lista.
+# Si pusiéramos, por ejemplo, el cuatro (4)...
+# lista.pop(4)
+# Nos eliminaría el elemento 4.
+# El elemento 4 era 0("hola"), 1("matias"), 2(34), 3(56), 4(23). 
+# Nos elimina el "23".
+# Pero no, ¿por qué? porque el elemento 4 no es el 23. Es el 56. Porque el elemento 4 es 0("hola"), 1("matias"), 2("TOMA MAMA"), 3(34), y el cuarto, después del 34, venía el 56, que ahora desapareció. Porque agregamos el elemento "TOMA MAMA" (lista.insert(2, "TOMA MAMA"))
+# Y además, agregamos el elemento "JAJAJAJA" (listen.append("JAJAJAJA"))
+# Entonces, al agregar estos elementos, la lista cambió.
+# Entonces, lo tenemos que tener en cuenta también.
+# Incluso, una técnica para eliminar el último. 
+# ¿El último elemento cuál es? 
+# El último elemento es "2030"
+# ¿Cómo hago para eliminar "2030"? 
+# Bueno, lo que se hace es poner: -1. 
+# lista.pop(-1)
+# Entonces, si se pone -1, se elimina el último elemento de la lista.
+# ['hola', 'matias', 'TOMA MAMA', 34, 56, 23, True, 'JAJAJAJA', False]
+# Es una técnica interesante porque, de esta forma, le decimos: "el índice 0 es "hola". Bueno, 1 para atrás. Y 1 para atrás no existe, entonces vuelve a arrancar desde el último. 
+# Si le decimos "-2", nos elimina el ante último
+# Nos elimina el "False"
+# Antes, el último era "2030". Lo eliminó.
+# El ante último es "False". 
+# ['hola', 'matias', 'TOMA MAMA', 34, 56, 23, True, 'JAJAJAJA', 2030]
+# Y acá desapareció. No está más el False.
+# Es una técnica que capaz pueda servir en un futuro.
+
+# Después, tenemos remove()...
  
 # REMOVE - remueve un elemento de una lista, pide valor
+#  
+
 # CLEAR - elimina todos los elementos de una lista
 
 # SORT - ordena una lista de forma ascendente a descendente
