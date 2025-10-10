@@ -1,22 +1,31 @@
 # Los metodos de listas son métodos que vamos a poder aplicar a listas para operarlas.
 
 #Creando una lista con list()
-lista = list(["hola","matias",34,56,23,True])
+lista = list([34,56,23,True,False])
 
 #devuelve la cantidad de elementos de la lista.
 cantidad_elementos = len(lista)
 
 #agregando un elemento a la lista
-lista.append("JAJAJAJA")
+lista.append(65)
 
 #agregando un elemento a la lista en un indice específico
 lista.insert(2,"TOMA MAMA")
 
 #agregamos varios elementos a la lista 
-lista.extend([False,2030])
+lista.extend([2030])
 
 #eliminando un elemento de la lista (por su indice)
 lista.pop(3) #-1 para elminar el último, -2 para eliminar el anteultimo, y así sucesivamente
+
+#removiendo un elemento de la lista por su valor
+lista.remove("TOMA MAMA")
+
+#eliminando todos los elementos de la lista
+# lista.clear()
+
+#ordenando la lista (si usamos el parametro reverse=True lo ordena en reversa)
+lista.sort(reverse=True)
 
 print(lista)
 
@@ -216,9 +225,97 @@ print(lista)
 # Después, tenemos remove()...
  
 # REMOVE - remueve un elemento de una lista, pide valor
-#  
+# remove() también remueve.
+# Solamente que remove() remueve un elemento de la lista por su valor.
+# O sea, ahora vamos a remover un elemento por su valor.
+# Es decir, al elemento lo buscamos con lista.remove()
+# removiendo un elemento de la lista por su valor
+# lista.remove("TOMA MAMA")
+# Ahora tenemos que buscar cómo se llama el elemento. 
+# Si lo encuentra, lo elimina.
+# Entonces, si ahora lo buscamos, lo eliminó.
+#['hola', 'matias', 34, 56, 23, True, 'JAJAJAJA', False, 2030]
+# Antes "TOMA MAMA" estaba en la posición dos (2), ahora ya no está más en la lista.
+# Si le pasamos un parámetro que no encuentra, no va a remover nada. Y no solamente eso, sino que nos lanza una excepción.
+# lista.remove("TOMA 9D8AS9MAMA")
+# Por eso es importante manejar esta excepción.
+# Y en este caso, pasarle un parámetro que sabemos que tiene.
+# lista.remove("TOMA MAMA")
+# Entonces, ahora sí cómo encontró "TOMA MAMA", lo puede eliminar. 
+# Y ya no tiene más "TOMA MAMA". 
+# ['hola', 'matias', 34, 56, 23, True, 'JAJAJAJA', False, 2030]
+# Si le pedimos que elimine el "56", elimina el "56".
+# lista.remove(56)
+# ['hola', 'matias', 'TOMA MAMA', 34, 23, True, 'JAJAJAJA', False, 2030]
+# Eliminó el "56"
+# Vamos a poner "TOMA MAMA", para que así como se agregó, se elimine. 
+# lista.insert(2,"TOMA MAMA")
+# lista.remove("TOMA MAMA")
+
+# Y después, por último, tenemos el clear()
 
 # CLEAR - elimina todos los elementos de una lista
+# El clear() elimina todo. Es decir, elimina todos los elementos de la lista
+# eliminando todos los elementos de la lista
+# lista.clear()
+# Así nomás, lista.clear() y los elimina todos.
+# Por eso, lo vamos a dejar al final.
+# Aunque sea algo que elimine, lo vamos a dejar al final porque no queremos que nos elimine la lista.
+# De hecho, si fijamos cómo está esta lista y la mostramos ahora, nos va a decir que es una lista vacía.
+# []
+# Nos pasó una lista vacía.
+# Porque todos los elementos fueron eliminados.
+# Así como no queremos esto, vamos a, por ahora, comentarla.
+# lista.clear()
+# Como la comentamos, actualizamos y ya no se ejecuta más.
+# ['hola', 'matias', 56, 23, True, 'JAJAJAJA', False, 2030]
+
+# Vamos a ir con el siguiente...
 
 # SORT - ordena una lista de forma ascendente a descendente
+# sort() es una función que ordena los elementos de forma ascendente.
+# Si, por ejemplo, se le dice lista.sort(), vamos a ver qué muestra ahora
+# lista.sort()
+# Lo que pasa es que esto no funciona si la lista tiene cadenas de texto. 
+# Entonces, lo que tenemos que hacer es borrar todas las cadenas de texto.
+# Así que, vamos a borrar todas las cadenas de texto. 
+# Borramos las cadenas de texto.
+# lista = list([34, 56, 23, True])
+# Y también, borramos el "JAJAJAJA" y vamos a crear un elemento que sea, por ejemplo, un "65".
+# lista.append(65)
+# Y el "False" también lo vamos a borrar y vamos a sacarlo.
+# lista.extend([2030])
+# Ahora si actualizamos, efectivamente, nos puede ordenar.
+# Así que vamos a actualizar
+# [True, 34, 56, 65, 2030]
+# Ahora sí nos pudo ordenar.
+# Aunque haya un "True", los True van primero, ¿por qué?, porque me agregó un "True". El "True" está al final. 
+# [34, 56, 23, True]
+# Yo agrego un "False"
+# Vamos a ver qué pasa
+# lista = list([34,56,23,True,False])
+# También en esta parte
+# lista.extend([False,2030])
+# Vamos a ver qué pasa ahora si le agregamos dos "False"
+# [False, False, True, 34, 56, 65, 2030]
+# Los "False" vienen primero. Los "True" vienen segundos.
+# Y después, vienen los números
+# Del menor (34) al mayor (2030)
+# A esto, también, le podemos dar una propiedad que es: reverse() = True
+# lista.sort(reverse=True)
+# Si le agregamos eso, lo que sucede es que se invierten.
+# [2030, 65, 56, 34, True, False, False]
+# O sea, ahora los ordenamos pero los ordenamos al revés. En inversa.
+# Es como si agarráramos cada uno de los elementos y los invirtiéramos.
+# Como que los diéramos vuelta automáticamente. 
+# 1, 2, 3, 4, 5
+# 5, 4, 3, 2, 1
+# Entonces, así es como funciona esto, los da vuelta.
+# Lo que antes era el elemento cinco (5), ahora es el elemento uno (1).
+# Lo que antes era el elemento uno (1), ahora es el elemento cinco (5).
+# Y así
+# Vamos a poner ahora: "ordenando la lista (si usamos el parametro reverse=True lo ordena en reversa)"
+# ordenando la lista (si usamos el parametro reverse=True lo ordena en reversa)
+# lista.sort(reverse=True)
+
 # REVERSE - invierte los elementos de una lista 
