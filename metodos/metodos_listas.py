@@ -13,7 +13,7 @@ lista.append(65)
 lista.insert(2,"TOMA MAMA")
 
 #agregamos varios elementos a la lista 
-lista.extend([2030])
+lista.extend([False,2030])
 
 #eliminando un elemento de la lista (por su indice)
 lista.pop(3) #-1 para elminar el último, -2 para eliminar el anteultimo, y así sucesivamente
@@ -24,11 +24,14 @@ lista.remove("TOMA MAMA")
 #eliminando todos los elementos de la lista
 # lista.clear()
 
-#ordenando la lista (si usamos el parametro reverse=True lo ordena en reversa)
-lista.sort(reverse=True)
+#ordenando la lista de forma ascendente(si usamos el parametro reverse=True lo ordena en reversa)
+lista.sort()
 
-print(lista)
+#invirtiendo los elementos de una lista
+lista.reverse()
 
+#verificando si un elemento se encuentra en la lista 
+elemento_encontrado = lista.index(56)
 
 # Vamos con el primero que es el list()
 
@@ -317,5 +320,154 @@ print(lista)
 # Vamos a poner ahora: "ordenando la lista (si usamos el parametro reverse=True lo ordena en reversa)"
 # ordenando la lista (si usamos el parametro reverse=True lo ordena en reversa)
 # lista.sort(reverse=True)
+# Vamos a sacar el parametro "reverse=True"
+# lista.sort()
+# Ahora sí
+# Vamos a poner ahora: "ordenando la lista de forma ascendente(si usamos el parametro reverse=True lo ordena en reversa)"
+# lista.sort()
+# ordenamos la lista de forma ascendente, es decir, hacia arriba. De menor a mayor.
+# Si lo ponemos en reversa, es decir, ordenarlo en reversa, lo ordena de forma descendente. Desde el mayor al menor.
+
+# Y por último, tenemos reverse() 
 
 # REVERSE - invierte los elementos de una lista 
+# Reverse() no hace lo mismo que sort() con el parametro "reverse" en True, sino que lo que hace es, justamente, "invierte los elementos", los invierte. O sea, si primero la ordenamos y después le damos en "reverse": "invirtiendo los elementos de una lista".
+# lista.reverse()
+# Si primero lo que hacemos es ordenar la lista, después eventualmente si va a ser el mismo resultado
+# [2030, 65, 56, 34, True, False, False]
+# Efectivamente, nos da el mismo resultado
+# Si actualizamos, literalmente nos da el mismo resultado. Nos ordena de mayor a menor, ¿por qué? porque sort() lo que hace es ordenarla. 
+# Si se le pusiera al sort() el parametro "reverse=True", haría lo mismo que reverse()
+# lista.sort(reverse=True)
+# Pero si se le sacara el sort(), reverse() lo que hace es la cadena que ya existe, simplemente, la cambia de lugar.
+# [2030, False, 65, False, True, 56, 34]
+# El elemento por defecto es así
+# [34, 56, True, False, 65, False, 2030]
+# Si le agregamos el reverse(), se invierte completamente
+# [2030, False, 65, False, True, 56, 34]
+# Entonces, el reverse() funciona para cualquier lista, revertirla. Solamente que el sort() lo que hace es primero la ordena y si le pasamos el parámetro "sort=True", también lo puede hacer al inversa.
+# Solamente que el reverse() lo hace sin ordenarla.
+# O sea, puede estar desordenada la lista porque, de todas formas, la revierte.
+# El que antes era el primer número, ahora es el último. Lo que antes era el segundo número, ahora es el anteúltimo.
+# Y lo que antes era el último número, ahora es el primero. Lo que antes era el anteúltimo, ahora es el segundo de la lista.
+# [34, 56, True, False, 65, False, 2030]
+# [2030, False, 65, False, True, 56, 34]
+# Así funciona reverse()
+
+# Y ahí, más o menos, tenemos todos y cada uno de los elementos de la lista
+# Así que, ya estuvimos viendo lo que vienen siendo los métodos de las listas
+# De hecho, las tuplas, justamente, y los sets, que son los conjuntos, también tienen sus propios métodos, pero son bastante diferentes. 
+# Es decir, si ahora, por ejemplo, mostráramos "dir(lista)"...
+# print(dir(lista))
+# ['__add__', '__class__', '__class_getitem__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__', '__iadd__', '__imul__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__rmul__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'append', 'clear', 'copy', 'count', 'extend', 'index', 'insert', 'pop', 'remove', 'reverse', 'sort']
+# nos va a mostrar todas las cosas que podemos hacer con una lista y las podemos ver.
+# Mientras que si buscáramos los de una tupla...
+# print(dir('dkasodksa'))
+# esta es una tupla porque la creamos con paréntesis
+# ['__add__', '__class__', '__contains__', '__delattr__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getnewargs__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__mod__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__rmod__', '__rmul__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', 'capitalize', 'casefold', 'center', 'count', 'encode', 'endswith', 'expandtabs', 'find', 'format', 'format_map', 'index', 'isalnum', 'isalpha', 'isascii', 'isdecimal', 'isdigit', 'isidentifier', 'islower', 'isnumeric', 'isprintable', 'isspace', 'istitle', 'isupper', 'join', 'ljust', 'lower', 'lstrip', 'maketrans', 'partition', 'removeprefix', 'removesuffix', 'replace', 'rfind', 'rindex', 'rjust', 'rpartition', 'rsplit', 'rstrip', 'split', 'splitlines', 'startswith', 'strip', 'swapcase', 'title', 'translate', 'upper', 'zfill']
+# nos dice que las cosas son diferentes
+# Algunas cosas sí son similares, como el endswith(), como el isnumeric(), como el upper(), el join(), ¿pero por qué? porque funciona casi como un string.
+# Vamos a agregar cualquier otro elemento más, así funciona como lista
+# print(dir(('dkasodksa',5)))
+# ['__add__', '__class__', '__class_getitem__', '__contains__', '__delattr__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getnewargs__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__rmul__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', 'count', 'index']
+# Ahora sí funciona como una tupla
+# Tenemos valores diferentes
+# Tenemos casi pocas funciones
+# Lo único que se puede hacer con las tuplas es contarlas, contar cuántos elementos tiene y usar la función index()
+# La función index() también es para buscar un elemento
+# Esas son las únicas dos cosas que podemos hacer.
+# index() para buscar elementos y count()
+# Así como index() nos buscaba, justamente, letras y nos devolvía la posición en la que estaba, nos devuelve también la posición en la que está el elemento que estamos buscando 
+# busqueda_index = cadena1.index("H")
+# Acá ya no funciona por caracteres, acá ya funciona por el elemento completo
+# Si, por ejemplo, se pone...
+# verificando si un elemento se encuentra en la lista 
+# elemento_encontrado = lista.index(56)
+# Si quero buscar, por ejemplo, el "56", que lo tenemos en la lista...
+# actualizo...
+# Y si le pido que me lo muestre, vamos a pedirle que me lo muestre...
+# print(elemento_encontrado)
+# lo que nos va a devolver es...
+# devuelve "2"
+# ¿por qué? porque la posición en la que se encuentra el "56" es el dos (2)
+# [2030, 65, 56, 34, True, False, False]
+#  |     |   |  
+#  v     v   v     
+#  0     1   2 
+# La posición es el dos (2)
+# Si le pedimos que encuentre, por ejemplo, el "34", o más fácil, le pedimos que encuentre el "True", le pasamos el "True"...
+# elemento_encontrado = lista.index(True)
+# vamos a hacer una predicción
+# [2030, 65, 56, 34, True, False, False]
+#  |     |   |   |   |
+#  v     v   v   v   v
+#  0     1   2   3   4
+# Nos tiene que lanzar un cuatro (4)
+# Actualizamos 
+# y nos lanzó un cuatro (4)
+# Así funciona
+# Pero qué pasa si, por ejemplo, se le dice que busque el "5"
+# elemento_encontrado = lista.index(5)
+# ¿El "5" lo va a encontrar?
+# ValueError: 5 is not in list
+# No
+# Hay un "56", pero no hay un "5"
+# Por más que "56" tenga "5", esto busca elementos completos
+# "5" no es "56"
+# Esto, básicamente, agarra cada elemento y dice: "Esto qué me pasó, ¿es igual al elemento de la lista?"
+# elemento_encontrado = lista.index(5)
+# [34,56,23,True,False]
+#  |  |  |                 
+#  v  v  v                    
+#  no no no      
+#     |
+#     v
+#     sí tiene un "5", 
+# pero no es igual a "56"    
+# El index() lo que busca, justamente, en listas es: "si este elemento es igual a alguno de los de la lista" 
+# Y "5" no es igual a ningún elemento
+# "56" contiene "5", pero no es igual "5" a "56"
+# Está bueno eso que se tenga en cuenta
+# También, nos lanza errores
+# Así que, vamos a darle "56" para que lo encuentre
+# elemento_encontrado = lista.index(56)
+# devuelve dos (2)
+# Ahora sí, ahí lo encontró y nos devolvió el índice
+# Así funcionan las tuplas
+# lista = list([34,56,23,True,False])
+# Si esto en vez de ser una lista, fuera una tupla, lo que podemos hacer con las tuplas es solamente buscar elementos y contarlos.
+# Porque si intentáramos en una tupla, invertirla, revertirla o alterarla de cualquier forma, no podemos
+# Porque, justamente, las tuplas y los conjuntos son inmutables.
+# Podemos redeclararlos, pero no podemos cambiar ningún elemento
+# No podemos cambiar el orden, por ejemplo, de ningún elemento de la tupla.
+# Pero si vamos a, por ejemplo, lo que puede hacer un diccionario, por ejemplo, ponemos dir(), y ponemos un conjunto, que los hacemos con "set"
+# print(dir(set))
+# Y vamos a agregar, por ejemplo, un valor y otro valor
+# # print(dir(set(["lasodksad","osdksodk"])))
+#               |           |
+#               v           v
+#               valor 1     valor 2
+# Entonces, actualizamos y tenemos el set creado
+# ['__and__', '__class__', '__class_getitem__', '__contains__', '__delattr__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__iand__', '__init__', '__init_subclass__', '__ior__', '__isub__', '__iter__', '__ixor__', '__le__', '__len__', '__lt__', '__ne__', '__new__', '__or__', '__rand__', '__reduce__', '__reduce_ex__', '__repr__', '__ror__', '__rsub__', '__rxor__', '__setattr__', '__sizeof__', '__str__', '__sub__', '__subclasshook__', '__xor__', 'add', 'clear', 'copy', 'difference', 'difference_update', 'discard', 'intersection', 'intersection_update', 'isdisjoint', 'issubset', 'issuperset', 'pop', 'remove', 'symmetric_difference', 'symmetric_difference_update', 'union', 'update']
+# Lo que nos dice es esto que se puede hacer 
+# Ahora sí, lo que podemos hacer es sacar elementos de los conjuntos, remover elementos de los conjuntos, pero no podemos agregar elementos.
+# Es decir, no podemos usar el append(), no podemos usar el extend(). 
+# Solamente podemos sacar elementos y remover elementos
+# Ni siquiera podemos usar el index()
+# Si de repente usamos con esto el index()...
+# Vamos a sacar una lista
+# elemento_encontrado_en_conjunto = set(["soadisaodi",54]).index(54) 
+# A ver si encuentra el elemento "54"
+# actualizamos...
+# AttributeError: 'set' object has no attribute 'index'
+# y nos tira una excepción
+# porque no se puede usar index() en conjunto
+# Si se quiere ver cuáles son todas las cosas que se puede hacer, hay que usar, simplemente, dir() y se ve como se vió recién
+# En definitiva, es interesante que podamos ver esto y no, efectivamente no se puede usar el index() en sets.
+# En las tuplas, solamente podemos buscar elementos y usar el index()
+# Mientras que en los conjuntos podemos hacer todo lo que se vió antes, que es copiarlos, limpiarlos... 
+# Es decir, si podemos eliminar todos los elementos de un conjunto, podemos copiarlos, podemos removerlos...
+# Y si se quiere ir viendo qué hacen las diferentes funciones, se recomienda investigarlas.
+# Pero no son más que las que se vieron hasta ahora.
+# Lo que sí, después tenemos los métodos de diccionarios que también tienen sus cosas.
+# O sea, tampoco podemos hacer tanto como con las listas, pero podemos hacer otras cosas interesantes.
