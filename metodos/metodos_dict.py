@@ -29,8 +29,17 @@ print("hola papa, el programa continua")
 
 # claves = diccionario.keys()
 
+#eliminando todo del diccionario
+#diccionario.clear()
+
+#eliminando un elemento del diccionario
+diccionario.pop("subs")
+
+#obteniendo un elemento dict_items iterable
+diccionario_iterable = diccionario.items()
+
 # Si ahora mostramos esto en un print, vamos a ver qué es lo que nos muestra
-print(claves)
+print(diccionario_iterable)
 
 # print(claves)
 # dict_keys(['nombre', 'apellido', 'subs'])
@@ -130,10 +139,72 @@ print(claves)
 # valor_de_kasdks = diccionario.get("kasdks")
 # ¿por qué "kasdks"? porque eso es lo que obtiene, está obteniendo el valor de esto: "kasdks"
 # Las variables tienen que ser intuitivas, cuando nosotros creamos una variable, la variable tiene que ser efectivamente algo que describa lo que contiene adentro, entonces, ¿qué contiene adentro? el valor de "kasdks"
-# y después imprimimo con print: "hola papa, el programa continua".
+# y después imprimo con print: "hola papa, el programa continua".
 # print("hola papa, el programa continua")
 # actualizamos...
 # hola papa, el programa continua
 # dict_keys(['nombre', 'apellido', 'subs'])
 # y ahí vemos que funciona.
 # y tenemos lo que necesitamos obtener.
+
+# Ahora, vamos a seguir con el siguiente método que es clear()
+# clear() elimina todos los elementos de la lista
+# es decir, si se pone... 
+# eliminando todo del diccionario
+# diccionario.clear()
+# y ahora vamos a ver el valor del diccionario
+# verifiquemoslo, vamos a ver que hay adentro...
+# print(diccionario)
+# devuelve esto:
+# hola papa, el programa continua
+# {}
+# adentro no tiene nada
+# es un diccionario vacío
+# eso es lo que hace clear()
+# elimina todo del diccionario
+
+# Después, tenemos otra función que es pop()
+# con pop(), eliminamos un elemento del diccionario
+# así como eliminamos pop(), eliminamos elementos de tuplas, de listas y demás, con pop() también podemos eliminar elementos del diccionario
+# por ejemplo, si se pone...
+# eliminando un elemento del diccionario
+# diccionario.pop("nombre")
+# corro el programa y me dice:
+# hola papa, el programa continua
+# {'apellido': 'bolonese', 'subs': 500}
+# si ahora de repente se quiere sacar el apellido porque estar con el nombre parece suficiente, el apellido no hace falta, bueno, digo esto y ahora me devuelve el nombre:
+# diccionario.pop("apellido")
+# hola papa, el programa continua
+# {'nombre': 'matias', 'subs': 500}
+# y si ahora de repente se quiere sacar los subs, saco los subs
+# diccionario.pop("subs")
+# hola papa, el programa continua
+# {'nombre': 'matias', 'apellido': 'bolonese'}
+# y suponiendo que se quiera sacar más elementos, pongo la coma(,) y el elemento (" "):
+# diccionario.pop("subs","nombre")
+# actualizo...
+# hola papa, el programa continua
+# {'nombre': 'matias', 'apellido': 'bolonese'}
+# y ahora saca "nombre" y "subs"
+
+# Y por último, tenemos items()
+# items() nos devuelve exactamente el diccionario
+# o sea, si ahora, por ejemplo, se muestra el diccionario, me devuelve esto:
+# {'nombre': 'matias', 'apellido': 'bolonese'}}
+# si ahora, de repente, se dice:
+# obteniendo un elemento dict_items iterable
+# diccionario_iterable = diccionario.items()
+# vamos a ver que es lo que devuelve en diccionario es esto:
+# print(diccionario)
+# hola papa, el programa continua
+# {'nombre': 'matias', 'apellido': 'bolonese'}
+# mientras que lo que devuelve en diccionario_iterable es otra cosa que es esto:
+# print(diccionario_iterable)
+# hola papa, el programa continua
+# dict_items([('nombre', 'matias'), ('apellido', 'bolonese')])
+# entonces, lo que devuelve "diccionario" es una cosa, y lo que devuelve "diccionario_iterable" es otra, ¿por qué? bueno, porque "diccionario" no se puede iterar
+# básicamente, iterar es recorrer el elemento, ya se va a ver más adelante
+# estamos recorriendo el elemento para poder acceder a cada uno de los elementos, en "diccionario" no se puede, mientras que en "diccionario_iterable" sí
+# ya cuando se vea el tema "bucles" se va a ver
+# así que, de hecho, lo próximo que vamos a ver después de los "inputs" y los ejercicios y todo lo que se haga, es los "bucles", o sea, "inputs", ejercicio y "bucles", y ahí vamos a volver a trabajar con esto, pero antes de ver eso, hay que entender bien cómo son los "inputs", cómo funcionan para que se cierre este ciclo y se comience con los primeros ejercicios prácticos que se van a hacer en lo que va del curso
+# así que, hasta acá se deja este apartado de métodos de diccionarios, y ahora sí se continúa con los "inputs"(entrada de datos, "data inputs")...
