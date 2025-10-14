@@ -148,7 +148,7 @@ print(diccionario_iterable)
 # y tenemos lo que necesitamos obtener.
 
 # Ahora, vamos a seguir con el siguiente método que es clear()
-# clear() elimina todos los elementos de la lista
+# clear() elimina todos los elementos del diccionario
 # es decir, si se pone... 
 # eliminando todo del diccionario
 # diccionario.clear()
