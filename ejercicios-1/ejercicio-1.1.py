@@ -20,9 +20,14 @@ otros_cursos_promedio = 4
 matias_curso = 1.5
 
 #diferencias de duracion
+
 diferencia_con_min = 100 - (matias_curso / otros_cursos_min * 100)
+diferencia_con_max = 100 - matias_curso * 1000 // otros_cursos_max / 10
+diferencia_con_promedio = 100 - matias_curso / otros_cursos_promedio * 100
 
 print(f'El curso de matias dura un: {diferencia_con_min}% menos que el más rápido')
+print(f'El curso de matias dura un: {diferencia_con_max}% menos que el más lento')
+print(f'El curso de matias dura un: {diferencia_con_promedio}% menos que el promedio')
 
 # El primer ejercicio consiste en lo siguiente:
 # El timing para ver los conceptos vistos en Python en un curso de corrido es de 2.5 horas como mínimo, 7 horas como máximo y 4 horas en promedio.
@@ -96,4 +101,32 @@ print(f'El curso de matias dura un: {diferencia_con_min}% menos que el más ráp
 # Porque si un curso lo que menos tarda en explicar todo lo que explicamos es de dos horas y media (2.5) es porque es el más rápido, si otro tarda siete (7) es porque es más lento, entonces acá decimos que es el más rápido y lo que nos muestra en pantalla es lo siguiente:
 # El curso de matias dura un: 40.0% menos que el más rápido
 # O sea, logramos explicar un cuarente (40) por ciento (%) más rápido lo que el curso más rápido logró explicar
-# Y así, podemos crear otras diferencias, es decir, así como es "diferencia_con_min" puede ser "diferencia_con_max" y "diferencia_con_promedio" 
+# Y así, podemos crear otras diferencias, es decir, así como es "diferencia_con_min" puede ser "diferencia_con_max" y "diferencia_con_promedio"
+# diferencia_con_min = 100 - matias_curso / otros_cursos_min * 100
+# diferencia_con_max = 100 - matias_curso / otros_cursos_max * 100
+# diferencia_con_promedio = 100 - matias_curso / otros_cursos_promedio * 100
+# Simplemente en uno ponemos "otros_cursos_max" y en otro "otros_cursos_promedio"
+# Entonces, actualizamos y ahí nos va a decir
+# print(f'El curso de matias dura un: {diferencia_con_min}% menos que el más rápido')
+# print(f'El curso de matias dura un: {diferencia_con_max}% menos que el más lento')
+# print(f'El curso de matias dura un: {diferencia_con_promedio}% menos que el promedio')
+# Y también vamos a ir mostrando el resultado de cada operación aritmética
+# Ahora actualizamos y nos dice:
+# El curso de matias dura un: 40.0% menos que el más rápido
+# El curso de matias dura un: 78.57142857142857% menos que el más lento
+# El curso de matias dura un: 62.5% menos que el promedio
+# Para reducir el número flotante de la "diferencia_con_max" (78.57142857142857), utilizamos la división doble (//), se usa de esta manera:
+# diferencia_con_max = 100 - matias_curso // otros_cursos_max * 100
+# Entonces, actualizamos y ahora nos dice:
+# El curso de matias dura un: 100.0% menos que el más lento
+# ¿Por qué? porque esto nos devuelven números que después terminan perjudicándonos a la hora de trabajar con decimales, ¿por qué?, porque no nos devuelven números flotantes
+# Entonces, ¿qué es lo que se recomienda hacer?
+# Primero, se multiplica (*) por mil (1000), esto para tener más números después del decimal y después en vez de multiplicarlo (*) por cien (100) simplemente lo dividimos (/) por diez (10), entonces de esa forma tenemos como una coma (.) en el decimal. 
+# diferencia_con_max = 100 - matias_curso * 1000 // otros_cursos_max / 10
+# Y si actualizamos ahora, dice:
+# El curso de matias dura un: 78.6% menos que el más lento
+# ¿Por qué? porque lo que se está haciendo es dándole tres ceros más (+000)
+# O sea, la división, la doble (//), devuelve un número que es entero, o sea que si dice "0.7" se va a redondear para 0, si dice que es "1.2" se redondea para "2"
+# En cambio, si se multiplica (*) por mil (1000) lo que antes era "1" ahora es "100", lo que antes era "1.4" ahora es "140"
+# Entonces, cuando lo dividimos (/), no nos va a dar un número tan bajo y después ese número lo restamos (-) y esa forma es cómo una forma en la matemática para obtener esto.
+# diferencia_con_max = 100 - matias_curso * 1000 // otros_cursos_max / 10
