@@ -19,15 +19,26 @@ otros_cursos_max = 7
 otros_cursos_promedio = 4
 matias_curso = 1.5
 
-#diferencias de duracion
+#Duración de crudos
+crudo_promedio = 5
+crudo_matias = 3.5
+
+#Diferencias de duracion
 
 diferencia_con_min = 100 - (matias_curso / otros_cursos_min * 100)
 diferencia_con_max = 100 - matias_curso * 1000 // otros_cursos_max / 10
 diferencia_con_promedio = 100 - matias_curso / otros_cursos_promedio * 100
 
+#Calculando el porcentaje de tiempo vacio removido
+tiempo_vacio_promedio = 100 - otros_cursos_promedio * 1000 // crudo_promedio / 10
+
+#Mostrando las diferencias de duración (ejercicio A)
 print(f'El curso de matias dura un: {diferencia_con_min}% menos que el más rápido')
 print(f'El curso de matias dura un: {diferencia_con_max}% menos que el más lento')
 print(f'El curso de matias dura un: {diferencia_con_promedio}% menos que el promedio')
+
+#Mostrando la cantidad de espacios vacíos que se remueven (ejercicio B)
+print(tiempo_vacio_promedio)
 
 # El primer ejercicio consiste en lo siguiente:
 # El timing para ver los conceptos vistos en Python en un curso de corrido es de 2.5 horas como mínimo, 7 horas como máximo y 4 horas en promedio.
@@ -130,3 +141,41 @@ print(f'El curso de matias dura un: {diferencia_con_promedio}% menos que el prom
 # En cambio, si se multiplica (*) por mil (1000) lo que antes era "1" ahora es "100", lo que antes era "1.4" ahora es "140"
 # Entonces, cuando lo dividimos (/), no nos va a dar un número tan bajo y después ese número lo restamos (-) y esa forma es cómo una forma en la matemática para obtener esto.
 # diferencia_con_max = 100 - matias_curso * 1000 // otros_cursos_max / 10
+# Si sabemos que todo lo que está después de la coma (.) se borra, hagamos que lo que está después de la coma (.), pasar la coma (.) para que todo lo que está de la coma (.) se borre y después le volvemos a agregar la coma (.) 
+# 20,6530602
+# 20,6
+# Y de esa forma como que ya tenemos el mismo número decimal, no en este caso en vez de moverla a dos (2) lugares la movemos una (1), si quisiéramos dos lugares lo haríamos de esta foma:
+#  diferencia_con_max = 100 - matias_curso * 10000 // otros_cursos_max / 10
+# Y de esa forma, ya tenemos la coma (.) movida a dos lugares
+# En este caso, el nivel jerárquico del orden en el que se realiza la forma es lo mismo, pero no es lo mismo hacer esto:
+# diferencia_con_max = 100 - matias_curso * 100 // otros_cursos_max / 10
+# que esto:
+# diferencia_con_max = 100 - matias_curso * 100 // otros_cursos_max
+# Esto es matemático, pero como redondea para abajo cambia, no es una división común, entonces en este caso no se anulan números con números
+# Y de esta forma, tenemos el ejercicio A hecho
+# El A lo tenemos listo, es decir, ya estamos mostrando la diferencia con cada uno de los cursos
+# El B nos pide que le mostremos cuál es el material de crudo que se remueve, o sea, cuál es el material que no sirve que en ambos casos sacamos 
+# Y eso lo podemos obtener con los crudos, así que vamos a crear las variables de crudos:
+# Duración de crudos
+# crudo_promedio = 5
+# crudo_matias = 3.5
+# Cuando hablamos de crudo nos referimos al vídeo sin editar
+# Por ejemplo, si se tiene un vídeo crudo de 5 horas, cuando se edita dura 4, más o menos, ¿por qué? porque es el crudo, es el material que sacamos cuando lo editamos, el crudo es el vídeo sin editar
+# Ahora lo que tenemos que hacer es calcular la diferencia, porque sabemos que "matias_curso" hasta este momento duró "1.5" y hasta este momento se grabó "3.5" mientras que en los otros cursos "5" es lo que se grabó y quedó "4" hasta este momento
+# Entonces, tenemos que hacer un cálculo de diferencias, así que vamos a hacerlo 
+# De hecho, podemos copiar la misma fórmula, copiamos la de arriba, vamos abajo y ponemos:
+# Calculando el porcentaje de tiempo vacio removido
+# tiempo_vacio_promedio = 100 - otros_cursos_promedio * 1000 // crudo_promedio / 10
+# Y más o menos, si preguntamos cuánto es, cuánto nos da esto
+# Primero vamos a agregar un comentario donde están los print():
+# Mostrando las diferencias de duración (ejercicio A)
+# print(f'El curso de matias dura un: {diferencia_con_min}% menos que el más rápido')
+# print(f'El curso de matias dura un: {diferencia_con_max}% menos que el más lento')
+# print(f'El curso de matias dura un: {diferencia_con_promedio}% menos que el promedio')
+# Y después agregamos esto:
+# Mostrando la cantidad de espacios vacíos que se remueven (ejercicio B)
+# print(tiempo_vacio_promedio)
+# ¿qué nos devuelve este print()?
+# devuelve esto:
+# 20.0
+# O sea, nos devuelve un 20%
