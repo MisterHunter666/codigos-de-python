@@ -31,14 +31,25 @@ diferencia_con_promedio = 100 - matias_curso / otros_cursos_promedio * 100
 
 #Calculando el porcentaje de tiempo vacio removido
 tiempo_vacio_promedio = 100 - otros_cursos_promedio * 1000 // crudo_promedio / 10
+tiempo_vacio_matias = 100 - matias_curso * 1000 // crudo_matias / 10
 
 #Mostrando las diferencias de duración (ejercicio A)
+
+print("----------------")
 print(f'El curso de matias dura un: {diferencia_con_min}% menos que el más rápido')
 print(f'El curso de matias dura un: {diferencia_con_max}% menos que el más lento')
 print(f'El curso de matias dura un: {diferencia_con_promedio}% menos que el promedio')
+print("----------------") 
 
 #Mostrando la cantidad de espacios vacíos que se remueven (ejercicio B)
-print(tiempo_vacio_promedio)
+print(f'Un curso promedio elimina un {tiempo_vacio_promedio}% de tiempo vacio')
+print(f'Este curso eliminó el {tiempo_vacio_matias}% de tiempo vacio')
+print("----------------")
+
+#mostrando diferencias si los cursos duraran 10 horas
+print(f'Ver 10 horas de este curso equivale a ver {otros_cursos_promedio * 100 // matias_curso / 10} horas de otros cursos')
+print(f'Ver 10 horas de otros cursos equivale a ver {matias_curso * 100 // otros_cursos_promedio / 10} horas de este curso')
+print("----------------")
 
 # El primer ejercicio consiste en lo siguiente:
 # El timing para ver los conceptos vistos en Python en un curso de corrido es de 2.5 horas como mínimo, 7 horas como máximo y 4 horas en promedio.
@@ -179,3 +190,60 @@ print(tiempo_vacio_promedio)
 # devuelve esto:
 # 20.0
 # O sea, nos devuelve un 20%
+# Vamos escribir esto en el print(tiempo_vacio_promedio):
+# print(f'Un curso promedio elimina un {tiempo_vacio_promedio}% de tiempo vacio')
+# print(f'Este curso eliminó el {tiempo_vacio_matias}% de tiempo vacio')
+# Y ahora, creamos la variable "tiempo_vacio_matias"
+# tiempo_vacio_matias = 100 - otros_cursos_promedio * 1000 // crudo_matias / 10
+# Los print() de "tiempo_vacio_promedio" y "tiempo_vacio_matias" devuelven esto:
+# Un curso promedio elimina un 20.0% de tiempo vacio
+# Este curso eliminó el 57.2% de tiempo vacio
+# Es decir, eliminanos más tiempo vacio que los demás, si un curso de 10 horas elimina 2, un curso, como el de este ejemplo, de 10 horas elimina 5.7 horas, todo para que siempre sea más óptimo
+# Ahora el siguiente ejercicio es el C
+# c) Ver 10 horas de este curso a cuánto equivaldría a otro curso
+# o sea, ver 10 horas de este curso es equivalente a ver x cantidad de horas de otros cursos, así que vamos a crearlo:
+# mostrando diferencias si los cursos duraran 10 horas
+# print(f'Ver 10 horas de este curso equivale a ver {otros_cursos_promedio / matias_curso * 10} horas de otros cursos')
+# Esto es cuánto dura en promedio y lo multiplicamos por (*) 10 (diez) 
+# Actualizamos y dice:
+# Ver 10 horas de este curso equivale a ver 26.666666666666664 horas de otros cursos
+# Bien, ahora tenemos que redondearlo
+# ¿Cómo lo redondeamos?
+# Bien, hacemos lo mismo que hicimos antes, la división la hacemos doble, "otros_cursos_promedio" lo multiplicamos por (*) mil (1000) y "matias_curso" se divide (/) por diez (10) en vez de hacer una multiplicación (*) 
+# print(f'Ver 10 horas de este curso equivale a ver {otros_cursos_promedio * 1000 // matias_curso / 10} horas de otros cursos')
+# Actualizamos:
+# Ver 10 horas de este curso equivale a ver 26.666666666666664 horas de otros cursos 
+# nos queda el mismo resultado
+# había que dividirlo (/) por cien (100) a "matias_curso"
+# print(f'Ver 10 horas de este curso equivale a ver {otros_cursos_promedio * 1000 // matias_curso / 100} horas de otros cursos')
+# Ahora sí, actualizamos y devuelve esto:
+# Ver 10 horas de este curso equivale a ver 26.66 horas de otros cursos
+# esto es para darle dos (2) decimales
+# Vamos a restarle un decimal en ambos casos porque no nos sirve tantos decimales:
+# print(f'Ver 10 horas de este curso equivale a ver {otros_cursos_promedio * 100 // matias_curso / 10} horas de otros cursos') 
+# Actualizamos y dice:
+# Ver 10 horas de este curso equivale a ver 26.6 horas de otros cursos
+# O sea, que si vemos diez (10) horas de este curso es como ver 26 horas y media (26.6) de otros cursos
+# Y ver diez (10) horas de otros cursos equivale a ver cuántas horas de este? vamos a calcularlo
+# print(f'Ver 10 horas de otros cursos equivale a ver {matias_curso * 100 // otros_cursos_promedio / 10} horas de este curso') 
+# Actualizamos y devuelve esto:
+# Ver 10 horas de otros cursos equivale a ver 3.7 horas de este curso
+# Ahora, vamos a separar todos con lineas porque nos queda un poco feo, entonces vamos a separarlo todo con líneas y vamos a poner 
+# print("------------") 
+# Y esto vamos a repetirlo en todo los casos
+# Actualizamos:
+
+# ----------------
+# El curso de matias dura un: 40.0% menos que el más rápido
+# El curso de matias dura un: 78.6% menos que el más lento
+# El curso de matias dura un: 62.5% menos que el promedio
+# ----------------
+# Un curso promedio elimina un 20.0% de tiempo vacio
+# Este curso eliminó el 57.2% de tiempo vacio
+# ----------------
+# Ver 10 horas de este curso equivale a ver 26.6 horas de otros cursos
+# Ver 10 horas de otros cursos equivale a ver 3.7 horas de este curso
+# ----------------
+
+# y ahí tenemos todos los datos y las lineas 
+# 
