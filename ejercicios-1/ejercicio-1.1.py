@@ -245,5 +245,4 @@ print("----------------")
 # Ver 10 horas de otros cursos equivale a ver 3.7 horas de este curso
 # ----------------
 
-# y ahí tenemos todos los datos y las lineas 
-# 
+# y ahí tenemos todos los datos y las lineas
