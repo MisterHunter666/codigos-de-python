@@ -36,9 +36,10 @@ tiempo_vacio_matias = 100 - matias_curso * 1000 // crudo_matias / 10
 #Mostrando las diferencias de duración (ejercicio A)
 
 print("----------------")
-print(f'El curso de matias dura un: {diferencia_con_min}% menos que el más rápido')
-print(f'El curso de matias dura un: {diferencia_con_max}% menos que el más lento')
-print(f'El curso de matias dura un: {diferencia_con_promedio}% menos que el promedio')
+print("El curso de matias dura:")
+print(f' - un {diferencia_con_min}% menos que el más rápido')
+print(f' - un {diferencia_con_max}% menos que el más lento')
+print(f' - un {diferencia_con_promedio}% menos que el promedio')
 print("----------------") 
 
 #Mostrando la cantidad de espacios vacíos que se remueven (ejercicio B)
@@ -230,13 +231,14 @@ print("----------------")
 # Ver 10 horas de otros cursos equivale a ver 3.7 horas de este curso
 # Ahora, vamos a separar todos con lineas porque nos queda un poco feo, entonces vamos a separarlo todo con líneas y vamos a poner 
 # print("------------") 
-# Y esto vamos a repetirlo en todo los casos
+# Y esto vamos a repetirlo en todos los casos
 # Actualizamos:
 
 # ----------------
-# El curso de matias dura un: 40.0% menos que el más rápido
-# El curso de matias dura un: 78.6% menos que el más lento
-# El curso de matias dura un: 62.5% menos que el promedio
+# El curso de matias dura:
+#  - un 40.0% menos que el más rápido
+#  - un 78.6% menos que el más lento
+#  - un 62.5% menos que el promedio
 # ----------------
 # Un curso promedio elimina un 20.0% de tiempo vacio
 # Este curso eliminó el 57.2% de tiempo vacio
@@ -246,3 +248,10 @@ print("----------------")
 # ----------------
 
 # y ahí tenemos todos los datos y las lineas
+
+# O sea, en todos los sentidos esto es mucho más óptimo, mucho más rápido y vamos a aprender
+# Básicamente, si decimos "no, porque cómo en menos de 10 horas de curso de Python de matias vas a aprender lo que te enseña este curso de 25 horas", bueno, es posible que un curso que dura 30 horas no nos enseñe lo mismo que este curso en 8 por ejemplo, es importante resaltarlo, porque a veces hay gente que habla con velocidad lenta y si hablamos con esta velocidad y además no editamos nada y si por ejemplo hay un error y nos quedamos pensando: "a ver cuánto puede durar esto, a ver, no, el error no es este, creo que..." 
+# Bueno, eso, hablar así, no editarlo y demás hace que los cursos duren tanto. Entonces, eso es una de las cosas que nosotros vamos a agarrar y la rompemos, la sacamos, cuello de botella roto
+# Mucha información en un solo vídeo y encima está bueno porque podemos ir parándolo haciendo pausa, está todo muy centralizado, no tienen que andar pasando: "no, este es el nivel promedio, no, este es el intermedio, no, este es el avanzado..." está todo en este, 
+# pero ya está, acá tenemos el primer ejercicio resuelto 
+# Vamos con el segundo ejercicio
