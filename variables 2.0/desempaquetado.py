@@ -17,6 +17,10 @@ nombre,apellido,suscriptores = datos
 #           nombre
 # ¿A qué va ser igual (=) apellido?
 # Va a ser igual (=) al segundo valor de la tupla
+# datos = ("Matias","F")
+#                    |
+#                    v
+#                 apellido
 # Si incluso se le pusiese un millón (1000000):
 # datos = ("Matias","F",1000000)
 # Y en la parte del desempaquetado, se podría poner por ejemplo también: "suscriptores"
@@ -58,3 +62,15 @@ print(suscriptores)
 # Acabamos de aprender a "desempaquetar"
 # ¿Para qué nos sirve esto?
 # Nos sirve para bastante y lo vamos a ver más adelante cuando veamos por ejemplo funciones
+# ya que hay funciones que por ejemplo nos devuelven tuplas 
+# y si hay funciones que nos devuelven tuplas, también hay funciones que nos devuelven listas
+# y si hay funicones que nos devuelven listas y funciones que nos devuelven tuplas, podemos crear justamente información a base de igualar (=) algo a una función que nos devuelvan estos datos que pedimos 
+# ahora lo vamos a ver bien más adelante esto
+# pero así es cómo se desempaquetan 
+# es una interesante forma de crear variables
+# justamente por eso es "desempaquetado"
+# una lista, una tupla, son como paquetes
+# "Dato1", "dato2", "dato3"
+# son como paquetes de datos y lo que hacemos es darle un dato a cada variable
+# de esa forma, desempaquetamos
+# ahora vamos a crear un nuevo archivo que va a ser "tuplas.py"...
