@@ -1,14 +1,24 @@
+#creamos los datos
+datos_en_tupla = ("Matias","F",1000000)
+datos_en_lista = ["Matias","F",1000000]
+
+#desempaquetado
+nombre,apellido,suscriptores = datos_en_lista
+
+#mostrando resultado
+print(suscriptores)
+
 # ¿Qué es el desempaquetado de variables?
 # Es una forma, una técnica que tenemos en Python, que tiene tantos lenguajes de pronunciación también, para básicamente asignarle valores a variables de una forma bastante particular
 # ¿Cómo es eso?
 # Vamos a crear por ejemplo una tupla
-datos = ("Matias","F",1000000)
+# datos = ("Matias","F",1000000)
 # "datos" va a ser igual (=) a una tupla que va a ser "Matias" 
 # ¿Qué es el desempaquetamiento?
 # Es una forma en la que podemos crear variables nuevas tomando los datos de, por ejemplo, una tupla
 # ¿Cómo hacemos eso?
 # Ponemos: nombre,apellido = datos
-nombre,apellido,suscriptores = datos
+# nombre,apellido,suscriptores = datos
 # ¿A qué va a ser igual (=) nombre?
 # Va a ser igual (=) al primer valor de la tupla
 # datos = ("Matias","F")
@@ -27,13 +37,13 @@ nombre,apellido,suscriptores = datos
 # nombre,apellido,suscriptores = datos
 # Entonces, esto también funcionaría
 # ¿Qué pasa si por ejemplo se le dice "print(nombre)"?
-print(nombre)
+# print(nombre)
 # Me va a mostrar "Matias" 
 # Si se le dice: "print(apellido)" 
-print(apellido)
+# print(apellido)
 # Me va a mostrar "F"
 # Y si se le dice: "print(suscriptores)"
-print(suscriptores)
+# print(suscriptores)
 # Me va a mostrar "1000000"
 # ¿Por qué? Porque esta es la forma en la que desencapsulamos variables 
 # Tenemos que hacer de cuenta que cada valor que ponemos va a estar colocado en cada uno de los elementos de la tupla
