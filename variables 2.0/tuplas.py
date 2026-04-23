@@ -93,3 +93,15 @@ print(tupla)
 # ('dato',)
 # Ahora es: tupla = "dato",
 # Y ahí tenemos la tupla creada
+# ¿Cuándo deberíamos crear tuplas?
+# Bien, las tuplas las podemos crear cuando son datos, por ejemplo, de solo lectura, o sea, cuando solo vamos a leer datos, creamos tuplas
+# Lo que pasa es que maneja mejor la memoria ya que lo que hacen las listas para poder ser modificable es: guardan dos lugares en memoria y uno lo van modificando y cuando uno está modificado, modifican al otro 
+# Entonces, modifican la lista y después modifican el otro espacio en memoria 
+# Modifican la lista y después modifican el otro espacio en memoria
+# Mientras que la tupla guarda solamente un lugar en memoria
+# Entonces, de esta forma, la tupla es inmutable porque si se reemplaza ese dato, corre riesgo de que se borre toda la variable completa
+# Entonces, es importante que entiendan que básicamente se almacena un lugar de la memoria diferente a una lista
+# Entonces, la lista se almacena en un lugar donde se puede utilizar, procesar y demás mientras que esto no
+# Entonces, es importante que entiendan que las tuplas para leer datos fijos y que no se van a modificar son mucho más óptimas y es lo que yo recomiendo 
+# Mientras que las listas cuando vamos a trabajar con datos que se van a ir modificando son lo óptimo, es decir, las listas para datos más flexibles
+# Ahora, vamos a crear otro archivo más que va a ser "conjuntos.py"...
