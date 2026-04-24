@@ -85,3 +85,18 @@ print(conjunto2)
 # {'dato 3', frozenset({'dato 2', 'dato 1'})}
 # Ahí ya no tira más error
 # Entonces, esta es la forma y la respuesta que nos viene a dar frozenset() que es para meter un conjunto dentro de otro conjunto
+# Si queremos trabajar con un conjunto o si estamos trabajando con conjuntos, necesitamos entender lo siguiente:
+# En teoría de conjuntos, tenemos por un lado lo que viene siendo un conjunto y por otro lado lo que viene siendo un subconjunto, que es como agarrar un par de datos del otro conjunto y crear un conjunto aparte 
+# Es decir, si, por ejemplo, se tiene el conjunto "A", que tiene los datos que estamos viendo (2, 4, 6), y, además, se tiene el conjunto "B", que tiene los datos que estamos viendo (2, 4, 6, 8, 10), "A" es un subconjunto de "B" porque "A" tenemos solamente tres (3) datos que están en el conjunto "B", solamente que en "B" tenemos más conjuntos
+# Entonces, "A" es un subconjunto de "B", porque "B" tiene todo "A" y más 
+# Esta, justamente, es la teoría de conjuntos (casi)
+# Un conjunto que incluye a otro y, además, tiene más datos, es un superconjunto de otro conjunto (en este caso, el conjunto "B") 
+# Es decir, tenemos dos (2) perspectivas:
+# La primer perspectiva es que "A" es un subconjunto de "B"
+# Entonces, "A" es un subconjunto y "B" es un conjunto 
+# Mientras que podemos tener la otra perspectiva que es ver a "B" como un superconjunto de "A" y "A" es un conjunto 
+# Es depende del elemento que tomemos como referencia 
+# Es decir, si decimos que "B" es un conjunto, "A" es un subconjunto de "B"
+# Y si decimos que "A" es un conjunto, "B" es un superconjunto de "A"
+# Esta es la teoría que se tiene que entender porque si queremos trabajar justamente con las siguientes funciones, tenemos que ver justamente esta teoría que es bastante interesante
+# Así que, la vamos a llevar a la práctica      
