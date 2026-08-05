@@ -20,8 +20,8 @@ resultado = conjunto2.issuperset(conjunto1)
 resultado = conjunto2 > conjunto1
 
 #verificar si hay algún número en comun 
-
 resultado = conjunto2.isdisjoint(conjunto1)
+
 
 print(resultado)
 
