@@ -1,4 +1,7 @@
+animales = ["pez","gato","perro","loro","cocodrilo"]
 
+for animal in animales:
+    print(f'Ahora la variable animal es igual a: {animal}')
 
 # Un bucle es repetir de una forma controlada la ejecución de un código
 # Bueno, para empezar tenemos que entender qué es lo que viene siendo iterar
@@ -118,5 +121,53 @@
 # lista = animales
 # que era como lo teníamos
 # Y vamos a crear un "gato", un "perro", un "loro" y un "cocodrilo"
-# lista = animales ["perro","gato","loro","cocodrilo"]
+# animales = ["perro","gato","loro","cocodrilo"]
 # Bien
+# ¿Cómo hacemos para recorrer esta lista?
+# Bien, ponemos:
+# for animal in animales:
+#     print(animal)
+# Cuando ejecutamos "print(animal)", muestra:
+# gato
+# perro
+# loro
+# cocodrilo
+# Bien, de hecho podemos decir en el print esto:
+# print(f'Ahora la variable animal es igual a: {animal}')
+# Si ejecutamos, dice:
+# Ahora la variable animal es igual a: gato
+# Ahora la variable animal es igual a: perro
+# Ahora la variable animal es igual a: loro
+# Ahora la variable animal es igual a: cocodrilo
+# Es facil, porque "animal" se va a ejecutar tantas veces como variables haya
+# Si ahora le agregamos una nueva variable, por ejemplo, "pez"...
+# animales = ["perro","gato","loro","cocodrilo","pez"]
+# Ejecutamos...
+# Ahora la variable animal es igual a: gato
+# Ahora la variable animal es igual a: perro
+# Ahora la variable animal es igual a: loro
+# Ahora la variable animal es igual a: cocodrilo
+# Ahora la variable animal es igual a: pez
+# Abajo se va a agregar "pez"
+# Y si "pez" lo ponemos al principio... 
+# Vamos a ponerlo adelante de "gato" y ponemos una coma (",")
+# animales = ["pez","gato","perro","loro","cocodrilo"]
+# Ejecutamos
+# Ahora la variable animal es igual a: pez
+# Ahora la variable animal es igual a: gato
+# Ahora la variable animal es igual a: perro
+# Ahora la variable animal es igual a: loro
+# Ahora la variable animal es igual a: cocodrilo
+# Ahí está, se va a ejecutar primero "pez"
+# Así es cómo funciona el bucle for, es fácil
+# "animal" es una variable que se va a crear solamente para ser utilizada acá adentro
+#                                |
+#                                v
+# print(f'Ahora la variable animal es igual a: {animal}')
+# Es decir, adentro de este bloque de código, 
+# Por eso está bueno, porque de esta forma podemos recorrerlo
+# Es decir, si nosotros, por ejemplo, queremos ir haciendo cosas como...
+# Vamos a crear otra lista que sea "numeros" es igual a (=), es decir, vamos a crear una lista de números
+# animal = [10,62,12,72]
+# Y queremos, por ejemplo, mostrar todos los números
+# 
