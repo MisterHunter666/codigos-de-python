@@ -1,7 +1,14 @@
 animales = ["pez","gato","perro","loro","cocodrilo"]
+numeros = [52,16,14,72]
 
+#recorriendo la lista animales
 for animal in animales:
     print(f'Ahora la variable animal es igual a: {animal}')
+
+#recorriendo la lista numeros y multiplicando cada valor por 10   
+for numero in numeros:
+    resultado = numero * 10
+    print(resultado)
 
 # Un bucle es repetir de una forma controlada la ejecución de un código
 # Bueno, para empezar tenemos que entender qué es lo que viene siendo iterar
@@ -169,5 +176,56 @@ for animal in animales:
 # Es decir, si nosotros, por ejemplo, queremos ir haciendo cosas como...
 # Vamos a crear otra lista que sea "numeros" es igual a (=), es decir, vamos a crear una lista de números
 # animal = [10,62,12,72]
-# Y queremos, por ejemplo, mostrar todos los números
-# 
+# Y si queremos, por ejemplo, mostrar todos los números y a esos números multiplicarlos por (*) dos (2), por ejemplo
+# Bueno...
+# for animal in animales:
+#     resultado = animal* 2
+# En este caso, vamos a cambiar el arreglo que vamos a poner
+# Es más, vamos a hacer una cosa, vamos a dejarlo así:
+# print(f'Ahora la variable animal es igual a: {animal}')
+# Así como estaba
+# Y vamos a poner: 
+# recorriendo la lista animales
+# for animal in animales:
+#    print(f'Ahora la variable animal es igual a: {animal}')
+# Y ahora vamos a venir acá abajo y poner...
+# for numero in numeros:
+# Y acá decimos...
+# Vamos a agregar estos numeros que habiamos agregado antes
+# Vamos a agregar cualquier otro numero ahora
+# numeros = [52,16,14,72]
+# Y acá lo que voy a hacer va a ser:
+# resultado = numero * 10
+# por ejemplo, lo multiplicamos por (*) diez (10)
+# Y ahora vamos a decir:
+# print(resultado)
+# Entonces si actualizamos este bucle, nos va a dar:
+# 520
+# 160
+# 140
+# 720
+# Que efectivamente son estos valores (52,16,14,72) multiplicados por (*) diez (10)
+# 52 * 10 = 520
+# 16 * 10 = 160
+# 14 * 10 = 140
+# 72 * 10 = 720
+# Y de esta forma podemos hacer muchas cosas, porque supongamos que, por ejemplo, tenemos que una lista con ítems, tenemos ítems con objetos
+# Tenemos un objeto y tenemos que mostrar "cuáles son todos los productos que tenés disponibles"
+# Y tengo disponible papa, tengo disponible huevo...
+# Entonces todos los productos disponibles los agregamos a una lista 
+# Y ahí los mostramos
+# Tenemos papa, tenemos huevo...
+# Y así, es fácil, es realmente interesante la forma en la que podemos trabajar con elementos de esta forma
+# Más adelante vamos a ver muchas formas igual de trabajar, pero esto es una forma interesante de recorrer listas
+# En realidad es la forma de recorrer listas, no es una forma interesante
+# Es la forma de hacerlo
+# for numero in numeros:
+#     resultado = numero * 10
+#     print(resultado)
+# Esto le vamos a agregar un comentario que sea:
+# recorriendo la lista numeros y multiplicando cada valor por 10
+# for numero in numeros:
+#     resultado = numero * 10
+#     print(resultado)
+# Y ahí más o menos nos quedó este dato que está acá
+# Bien, hasta acá está todo bien
