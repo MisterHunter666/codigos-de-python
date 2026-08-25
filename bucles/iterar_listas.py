@@ -1,4 +1,4 @@
-animales = ["pez","gato","perro","loro","cocodrilo"]
+animales = ["gato","perro","loro","cocodrilo"]
 numeros = [52,16,14,72]
 
 #recorriendo la lista animales
@@ -9,6 +9,17 @@ for animal in animales:
 for numero in numeros:
     resultado = numero * 10
     print(resultado)
+
+
+#iterando dos listas del mismo tamaño al mismo tiempo    
+for numero,animal in zip(animales,numeros):
+    print(f"recorriendo lista 1: {numero}")
+    print(f"recorriendo lista 2: {animal}")
+    
+
+for num in range(5,10):
+    print(num)
+    
 
 # Un bucle es repetir de una forma controlada la ejecución de un código
 # Bueno, para empezar tenemos que entender qué es lo que viene siendo iterar
@@ -229,3 +240,165 @@ for numero in numeros:
 #     print(resultado)
 # Y ahí más o menos nos quedó este dato que está acá
 # Bien, hasta acá está todo bien
+# Ahora, la pregunta es, ¿cómo haríamos si quisiéramos iterar sobre dos (2) listas?
+# ¿Cómo hacemos para hacer dos (2) iteraciones al mismo tiempo?
+# Bueno, la forma es simple
+# Si queremos iterar dos (2) listas, podemos poner un for adentro de otro for, que son for anidados
+# O dos for juntos
+# Pero la forma es utilizando una función particular que es "zip()"
+# Vamos a hacer...
+# Si quisiéramos iterar ambas listas juntas, ¿cómo haríamos?
+# Bueno, primero las listas tienen que tener la misma cantidad de elementos
+# En este caso, por ejemplo, tenemos "pez", "gato", "perro", "loro", "cocodrilo"
+# Son cinco (5) elementos
+# Vamos ahora al elemento "pez"
+# animales = ["gato","perro","loro","cocodrilo"]
+# Así nos queda la misma cantidad de elementos arriba y abajo
+# Y ponemos:
+# for numero,animal in zip()
+#                         |
+#                         v
+# Y acá ponemos lista uno (1) y lista dos (2)
+# En este caso sería "animales" y "numeros"
+# for numero,animal in zip(animales,numeros)
+# Acá ponemos dos puntos (:)
+# for numero,animal in zip(animales,numeros):
+# Y abajo, si nos fijamos, podemos poner: 
+# print(f"recorriendo lista 1: {numero}")
+#       ^                       |
+#       |                       |
+#    Acá ponemos la f           |
+#                               v
+#                       Y acá le agregamos el animal, en este caso es "numero"
+# Y abajo ponemos "animal" y lista dos (2)
+# print(f"recorriendo lista 2: {animal}")
+# Si ejecutamos esto, acá si nos fijamos...
+# Ahora la variable animal es igual a: gato
+# Ahora la variable animal es igual a: perro
+# Ahora la variable animal es igual a: loro
+# Ahora la variable animal es igual a: cocodrilo
+# 520
+# 160
+# 140
+# 720
+# recorriendo lista 1: gato 
+# recorriendo lista 2: 52
+# recorriendo lista 1: perro
+# recorriendo lista 2: 16
+# recorriendo lista 1: loro
+# recorriendo lista 2: 14
+# recorriendo lista 1: cocodrilo
+# recorriendo lista 2: 72
+# De esta forma interesante con la función zip(), podemos recorrer dos (2) listas al mismo tiempo
+# Es muy interesante esto
+# Lo de arriba vamos borrarlo rápidamente, o sea esto:
+# recorriendo la lista animales
+# for animal in animales:
+#     print(f'Ahora la variable animal es igual a: {animal}')
+
+# recorriendo la lista numeros y multiplicando cada valor por 10   
+# for numero in numeros:
+#     resultado = numero * 10
+#     print(resultado)
+# Actualizamos...
+# Y si nos fijamos, solamente vamos a mostrar este código:
+# for numero,animal in zip(animales,numeros):
+#     print(f"recorriendo lista 1: {numero}")
+#     print(f"recorriendo lista 2: {animal}")
+# Básicamente, es un bucle en el que podemos acceder al valor de la vuelta del primer elemento en ambos casos
+# Después la segunda vuelta va a ser igual al (=) segundo valor en ambos casos
+# La tercera vuelta va a ser igual al (=) valor...
+# Y esto la verdad que es excelente
+# La verdad que es muy utilizado y es muy recomendable usarlo cuando queramos iterar dos (2) elementos de la misma lista 
+# Podemos iterar dos (2) y tres (3)
+# Acá también si tenemos otra lista, también con cuatro (4) elementos podemos poner alguna simplificación de la lista tres (3)...
+# for numero,animal,lista3 in zip(animales,numeros,listacompleta):
+# Y acá poner la lista tres (3), completa
+# Y también funciona con más de dos (+2) listas
+# Es interesante esto
+# iterando dos (2) listas del mismo tamaño al mismo tiempo
+# Entonces, iteramos dos (2) listas al mismo tiempo
+# Es interesante esta función
+# Lo único es que esto se itera al mismo tiempo
+# Es decir, no es "primero todo uno, después todo otro"
+# Es "uno, otro, uno, otro", "uno, otro, uno, otro", "lista uno, lista dos", "lista uno, lista dos"
+# Es decir, "elemento uno, lista uno", "elemento uno, lista dos", "elemento dos, lista uno", "elemento dos, lista dos", "elemento tres, lista uno", "elemento tres, lista dos", "elemento cuatro, lista uno", "elemento cuatro, lista dos", y así...
+# Bueno, después también lo que podemos hacer para iterar es iterar utilizando la función range()
+# Es decir, si hacemos esto por ejemplo y usamos range():
+# for num in range(5,10)
+#  ^
+#  |
+#  |
+# Acá podemos poner cualquier cosa, pero lo interesante siempre es poner nombres que coincidan con lo que estamos haciendo
+# for num in range(5,10)
+#                   ^
+#                   |
+# Acá si ponemos del cinco al diez (5,10), esto básicamente va a ejecutar números del cinco (5) al diez (10)
+# Entonces si ponemos dos puntos (:)
+# for num in range(5,10):
+# Y digo:
+# print(num)
+# Lo que va a mostrar esto, básicamente, es lo que vamos a ver abajo de todas las demás...
+# 5
+# 6
+# 7
+# 8
+# 9
+# Si a range() le definimos dos (2) parámetros, el primer parámetro es en donde arranca
+# Y el segundo en donde termina
+# Por ejemplo:
+# for num in range(10,20):
+#                    ^
+#                    |
+# Acá pusimos veinte (20)
+# Entonces, arranca en diez (10), termina en veinte (20)
+# 10
+# 11
+# 12
+# 13
+# 14
+# 15
+# 16
+# 17
+# 18
+# 19
+# ... hasta deicinueve (19)
+# El veinte (20) nunca cuenta, es: 
+# El primero está incluido y el último no
+# Son diez (10) números
+# O sea, vamos desde el diez (10) hasta el veinte (20)
+# El veinte (20) no lo contamos, el diez (10) sí
+# Y si no ponemos dos parámetros y solamente ponemos uno
+# for num in range(20):
+# Arranca de cero (0) hasta el número que le digamos
+# Actualizamos...
+# 0
+# 1
+# 2
+# 3
+# 4
+# 5
+# 6
+# 7
+# 8
+# 9
+# 10
+# 11
+# 12
+# 13
+# 14
+# 15
+# 16
+# 17
+# 18
+# 19
+# Si le decimos que queremos hasta el cinco (5)...
+# for num in range(5):
+# Actualizamos...
+# 0
+# 1
+# 2
+# 3
+# 4
+# Va de cero (0) a cinco (5)
+# Si no le pasamos ningún número adelante y solamente le pasamos un (1) número en vez de dos (2), el único parámetro significa "de cero (0) a el que le digamos"
