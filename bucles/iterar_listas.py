@@ -17,9 +17,16 @@ for numero,animal in zip(animales,numeros):
     print(f"recorriendo lista 2: {animal}")
     
 
-for num in range(5,10):
-    print(num)
+#forma no óptima de recorrer una lista
+for num in range(len(numeros)):
+    print(numeros[num])
     
+
+#forma correcta de recorrer una lista con su índice
+for num in enumerate(numeros):
+    indice = num[0]
+    valor = num[1]
+    print(f'el indice es: {indice} y el valor es {valor}')
 
 # Un bucle es repetir de una forma controlada la ejecución de un código
 # Bueno, para empezar tenemos que entender qué es lo que viene siendo iterar
@@ -402,3 +409,93 @@ for num in range(5,10):
 # 4
 # Va de cero (0) a cinco (5)
 # Si no le pasamos ningún número adelante y solamente le pasamos un (1) número en vez de dos (2), el único parámetro significa "de cero (0) a el que le digamos"
+# Si de repente queremos recorrer una lista, también podemos hacer esto:
+# Podemos decir, por ejemplo, "numeros" y vamos a encerrarlo en len
+# for num in range(len(numeros)):
+# Entonces, si acá nosotros tenemos la cantidad de números, lo que podemos hacer en "print" es decir:
+# print(numeros(num))
+# Entonces, acá nos va a decir justamente lo mismo...
+# 52
+# 16
+# 14
+# 72
+# Estamos recorriendo una lista por el índice 
+# ¿Por qué?
+# Porque "len(numeros)" nos muestra la cantidad de elementos que tiene "numeros"
+# Tiene cuatro (4) elementos (52,16,14,72)
+# Okey, entonces arranca de cero (0) a cuatro (4)
+# En la primera vuelta esto va a ser cero (0) y "numeros[0]" es igual a (=) esto: 52
+# "numeros[1]" es igual a (=) esto: 16
+# Es una forma de recorrer una lista, pero esta forma no es óptima
+# Entonces, vamos a poner:
+# forma no óptima de recorrer una lista
+# for num in range(len(numeros)):
+#     print(numeros(num))
+# La forma correcta de hacer esto es con la función "enumerate()"
+# Vamos a poner:
+# forma correcta de recorrer una lista con su índice
+# La forma correcta es:
+# for num in enumerate(numeros):
+# Entonces, si venimos acá abajo, ahora "num" va a ser igual a (=) dos (2) variables
+# "num" es igual a (=) una tupla
+# print(type(num))
+# Si le decimos que nos muestre "type(num)", van a ver que "num" es igual a (=)...  
+# <class 'tuple'>
+# <class 'tuple'>
+# <class 'tuple'>
+# <class 'tuple'>
+# Tuplas, son tuplas
+# ¿Pero qué nos va a devolver?
+# ¿Qué tupla nos devuelve?
+# Bueno, vamos a ver qué tupla nos devuelve
+# print(num)
+# Si actualizamos, nos va a devolver que las tuplas son...
+# (0, 52)
+# (1, 16)
+# (2, 14)
+# (3, 72)
+# O sea que el primer valor que nos devuelve es el índice
+# El segundo es el valor
+# Por ejemplo:
+# (0,      52)
+#  ^       ^
+#  |       |
+# índice  valor
+# Entonces si queremos acceder al índice del elemento, simplemente hacemos esto
+# print(num[0])
+# Ya acá tenemos el índice
+# Y nos va a mostrar:
+# 0
+# 1
+# 2
+# 3
+# Y si queremos acceder al valor, ponemos el "1"
+# Así:
+# print (num[1])
+# Y si queremos acceder a los dos, simplemente decimos que: 
+# "índice" igual (=) "num[0]" y "valor" igual (=) "num[1]"
+# indice = num[0]
+# valor = num[1]
+# Entonces ahora podemos mostrar en pantalla:
+# print(f'el indice es: {indice} y el valor es {valor}')
+# Entonces, lo ejecutamos y nos dice...
+# el indice es: 0 y el valor es 52
+# el indice es: 1 y el valor es 16
+# el indice es: 2 y el valor es 14
+# el indice es: 3 y el valor es 72
+# Y de esta forma es una forma correcta
+# Hacer esto:
+# for num in range(len(numeros)):
+#     print(numeros[num])
+# No es una forma profesional
+# Eso dejésmoslo para otros lenguajes de programación que no tienen la posibilidad de tener funciones como "enumerate()"
+# Lo más parecido es el forEach() pero no funciona igual
+# for num in enumerate(numeros):
+#     indice = num[0]
+#     valor = num[1]
+#     print(f'el indice es: {indice} y el valor es {valor}')
+# Esta es la forma correcta de recorrer una lista obteniendo su índice
+# Si necesitamos obtener el índice de la lista, así es cómo se obtiene correctamente
+# Porque a veces lo necesitamos obtener
+# Es muy útil a veces obtener el índice
+# Bueno, esta es la forma
