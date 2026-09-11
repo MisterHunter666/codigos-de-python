@@ -27,6 +27,15 @@ for num in enumerate(numeros):
     indice = num[0]
     valor = num[1]
     print(f'el indice es: {indice} y el valor es {valor}')
+    
+#usando el for/else
+for numero in numeros:
+    print(f"ejecutando el ultimo bucle, valor actual: {numero}")
+else:
+    print("el bucle termino")
+    
+
+#todo lo anterior funciona exactamente igual para tuplas
 
 # Un bucle es repetir de una forma controlada la ejecución de un código
 # Bueno, para empezar tenemos que entender qué es lo que viene siendo iterar
@@ -499,3 +508,122 @@ for num in enumerate(numeros):
 # Porque a veces lo necesitamos obtener
 # Es muy útil a veces obtener el índice
 # Bueno, esta es la forma
+# Y por último, también podemos utilizar el else en el for
+# O sea, "for else"
+# usando el else
+# Al final de un bucle, le agregamos el else, vamos a poner lo mismo:
+# for numero in numeros:
+#     print(f"ejecutando el ultimo bucle, valor actual: {numero}")
+# Y abajo ponemos el else
+# Si ponemos el else abajo del print, no va a hacer nada
+# Tiene que estar a la altura del for
+# Es decir, el for abajo termina
+# Entonces, ponemos el else como si fuera un if
+# En vez de un if, un else
+# else:
+#     Y acá vamos a ejecutar "print"
+#     print("el bucle termino")
+# Entonces, ejecutamos el código...
+# ejecutando el ultimo bucle, valor actual: 52
+# ejecutando el ultimo bucle, valor actual: 16
+# ejecutando el ultimo bucle, valor actual: 14
+# ejecutando el ultimo bucle, valor actual: 72
+# el bucle termino
+# Los "else" dentro de los "for" se van a ejecutar siempre
+# De hecho, sin números incluso
+# numeros = []
+# "numeros" es una lista vacía
+# Cuando lo ejecutamos, por más que no haya datos...
+# Ahora la variable animal es igual a: gato
+# Ahora la variable animal es igual a: perro
+# Ahora la variable animal es igual a: loro
+# Ahora la variable animal es igual a: cocodrilo
+# el bucle termino
+# Fijémonos en que "ejecutando el ultimo bucle" no está
+# Está "Ahora la variable animal es igual a: {animal}", que es del bucle anterior
+# Ni siquiera, porque no se está ejecutando
+# El que se ejecutó fue este:
+# for animal in animales:
+#     print(f'Ahora la variable animal es igual a: {animal}')
+# Los demás no se ejecutaron 
+# Porque todos esos bucles recorren números
+# Y si "numeros" está en cero (0), ninguno se va a recorrer
+# Esto siempre se ejecuta igual:
+# print("el bucle termino")
+# En caso de que no haya elementos por recorrer... 
+# Si no va a recorrer esto:
+# for numero in numeros:
+# Entonces, que muestre el "else"
+# Es decir, el "else" siempre se muestra sólo una vez
+# Sólo una vez y es al final del bucle
+# Se haya ejecutado alguna vez o no
+# Se muestra igual
+# Es como algo que va a mostrar siempre al terminar el bucle
+# Si hay un "break" no, pero eso lo vemos en unos minutos
+# De hecho, acá en el "else", si probamos por ejemplo el valor "numero"
+# Venimos acá y ponemos "numero":
+# else:
+#     print(numero)
+# Actualizamos...
+#
+# "Else" no nos va a mostrar nada
+# Literalmente, "numero" dice que no está definida
+# Exception has occurred: NameError
+# name 'numero' is not defined
+# Usando el for/else
+# Ahora sí
+# Esto también funciona exactamente igual con tuplas
+# Así como hicimos esto, también podemos hacerlo con las tuplas
+# Es decir, cualquiera de estos valores lo podemos reemplazar por una tupla
+# Por ejemplo:
+# animales = ["gato","perro","loro","cocodrilo"]
+# numeros = [52,16,14,72]
+# Si esto lo reemplazáramos por una tupla...
+# animales = ("gato","perro","loro","cocodrilo")
+# numeros = (52,16,14,72)
+# Todos los bucles funcionarían exactamente igual
+# Actualizamos...
+# Y si nos fijamos...
+# Ahora la variable animal es igual a: gato
+# Ahora la variable animal es igual a: perro
+# Ahora la variable animal es igual a: loro
+# Ahora la variable animal es igual a: cocodrilo
+# 520
+# 160
+# 140
+# 720
+# recorriendo lista 1: gato
+# recorriendo lista 2: 52
+# recorriendo lista 1: perro
+# recorriendo lista 2: 16
+# recorriendo lista 1: loro
+# recorriendo lista 2: 14
+# recorriendo lista 1: cocodrilo
+# recorriendo lista 2: 72
+# 52
+# 16
+# 14
+# 72
+# el indice es: 0 y el valor es 52
+# el indice es: 1 y el valor es 16
+# el indice es: 2 y el valor es 14
+# el indice es: 3 y el valor es 72
+# ejecutando el ultimo bucle, valor actual: 52
+# ejecutando el ultimo bucle, valor actual: 16
+# ejecutando el ultimo bucle, valor actual: 14
+# ejecutando el ultimo bucle, valor actual: 72
+# el bucle termino
+# Lo mismo
+# Funciona exactamente igual
+# O sea, funciona lo mismo
+# Así que, le vamos a reemplazar "iterar_listas.py"
+# Seleccionamos "Rename" o "Cambiar nombre"...
+# Y ponemos "iterar_listas_y_tuplas.py"
+# Ahí lo tenemos...
+# Esto funciona
+# Abajo de todo vamos a poner...
+# todo lo anterior funciona exactamente igual para tuplas
+# Entonces ahí estamos
+# Y ahí tenemos todo como ya está
+# Abarcamos listas y tuplas
+# Ahora vamos a crear otro "file", otro archivo, para iterar "sets" o "conjuntos"...
