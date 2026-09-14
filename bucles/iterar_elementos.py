@@ -17,7 +17,7 @@ for numero,animal in zip(animales,numeros):
     print(f"recorriendo lista 2: {animal}")
     
 
-#forma no óptima de recorrer una lista
+#forma no óptima de recorrer una lista con su índice (no funciona en conjuntos)
 for num in range(len(numeros)):
     print(numeros[num])
     
@@ -35,7 +35,7 @@ else:
     print("el bucle termino")
     
 
-#todo lo anterior funciona exactamente igual para tuplas
+#todo lo anterior funciona exactamente igual para tuplas y conjuntos
 
 # Un bucle es repetir de una forma controlada la ejecución de un código
 # Bueno, para empezar tenemos que entender qué es lo que viene siendo iterar
@@ -627,3 +627,19 @@ else:
 # Y ahí tenemos todo como ya está
 # Abarcamos listas y tuplas
 # Ahora vamos a crear otro "file", otro archivo, para iterar "sets" o "conjuntos"...
+# Corrección, en vez de hacer eso, ponemos al final de este archivo:
+# todo lo anterior funciona exactamente igual para tuplas y conjuntos
+# listas y tuplas:
+# animales = ["gato","perro","loro","cocodrilo"]
+# numeros = [52,16,14,72]
+# conjuntos:
+# animales = {"gato","perro","loro","cocodrilo"}
+# numeros = {52,16,14,72}
+# Excepto esto:
+# forma no óptima de recorrer una lista con su índice (no funciona en conjuntos)
+# for num in range(len(numeros)):
+#     print(numeros[num])
+# Y ahora sí vamos a ver cómo se recorre un diccionario
+# Porque esti sí, ya los diccionaarios funcionan diferente
+# Los diccionarios tienen algo bastante particular
+# Primero, creamos un archivo llamado "iterar_diccionarios.py"...
